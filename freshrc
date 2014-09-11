@@ -11,7 +11,6 @@
 fresh freshshell/fresh bin/fresh --bin
 fresh jasoncodes/dotfiles shell/aliases/rails.sh
 fresh jasoncodes/dotfiles shell/aliases/ruby.sh
-fresh jasoncodes/dotfiles shell/aliases/rbenv.sh
 fresh jasoncodes/dotfiles shell/aliases/git.sh
 fresh jasoncodes/dotfiles config/gitconfig --file
 fresh jasoncodes/dotfiles config/pryrc --file
