@@ -20,22 +20,4 @@ fresh twe4ked/dotfiles bin/heroku-remote-add --bin
 fresh twe4ked/dotfiles bin/build_status --bin
 fresh jasoncodes/dotfiles bin/adduser --bin
 fresh jasoncodes/dotfiles bin/wemux/\* --bin
-fresh hackling/morse bin/morse --bin
 
-# Vim settings
-fresh-options --file=~/.vimrc --marker=\"
-  fresh jasoncodes/dotfiles vim/leader.vim
-  fresh twe4ked/dotfiles vim/vundle_before.vim
-  fresh twe4ked/dotfiles vim/vundle.vim
-  fresh twe4ked/dotfiles vim/vundle_after.vim
-  fresh twe4ked/dotfiles vim/plugin_config/\*
-  fresh twe4ked/dotfiles vim/functions.vim --filter="grep -v BufWinEnter" --ref=3e112b2
-  fresh twe4ked/dotfiles vim/keybindings.vim
-  fresh twe4ked/dotfiles vim/plugin_config/\*
-  fresh twe4ked/dotfiles vim/auto_commands.vim
-  fresh jasoncodes/dotfiles vim/config/format.vim
-  fresh jasoncodes/dotfiles vim/plugins/ruby.vim
-  fresh hackling/dotfiles vim/keybindings/clipboard.vim
-  fresh vim/vimrc
-fresh-options
-fresh jasoncodes/dotfiles config/tmux.conf --file
