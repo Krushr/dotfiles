@@ -28,6 +28,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh vim/vundle.vim
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim
+  fresh jasoncodes/dotfiles vim/plugins/ack.vim
   fresh hackling/dotfiles vim/plugins/surround.vim
   fresh twe4ked/dotfiles vim/vundle_after.vim
   fresh vim/leader.vim
