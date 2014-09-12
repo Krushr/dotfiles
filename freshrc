@@ -14,6 +14,7 @@ fresh jasoncodes/dotfiles shell/aliases/rails.sh
 fresh jasoncodes/dotfiles shell/aliases/ruby.sh
 fresh jasoncodes/dotfiles shell/aliases/git.sh
 fresh jasoncodes/dotfiles shell/editor.sh
+fresh jasoncodes/dotfiles shell/config/direnv.sh
 fresh jasoncodes/dotfiles config/gitconfig --file
 fresh jasoncodes/dotfiles config/gitignore --file
 fresh jasoncodes/dotfiles config/pryrc --file
