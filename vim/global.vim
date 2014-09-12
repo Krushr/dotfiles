@@ -60,5 +60,7 @@ endif
 set background=dark
 set cursorline
 
+colorscheme rdark-terminal
+
 " Required for textobjs
 runtime macros/matchit.vim

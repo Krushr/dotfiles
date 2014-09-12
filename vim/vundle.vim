@@ -11,3 +11,6 @@ Bundle 'upAndDown'
 
 " Visual
 Bundle 'chreekat/vim-paren-crosshairs'
+
+" Colors
+Bundle 'rdark-terminal'
