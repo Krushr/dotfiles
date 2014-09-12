@@ -23,3 +23,20 @@ fresh twe4ked/dotfiles bin/build_status --bin
 fresh jasoncodes/dotfiles bin/adduser --bin
 fresh jasoncodes/dotfiles bin/wemux/\* --bin
 
+fresh-options --file=~/.vimrc --marker=\"
+  fresh twe4ked/dotfiles vim/vundle_before.vim
+  fresh vim/vundle.vim
+  fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
+  fresh jasoncodes/dotfiles vim/plugins/ruby.vim
+  fresh hackling/dotfiles vim/plugins/surround.vim
+  fresh twe4ked/dotfiles vim/vundle_after.vim
+  fresh jasoncodes/dotfiles vim/config/backups.vim
+  fresh jasoncodes/dotfiles vim/config/undo.vim
+  fresh jasoncodes/dotfiles vim/config/format.vim
+  fresh jasoncodes/dotfiles vim/config/tags.vim
+  fresh jasoncodes/dotfiles vim/config/search.vim
+  fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
+  fresh jasoncodes/dotfiles vim/config/statusline.vim
+  fresh jasoncodes/dotfiles vim/config/diff.vim
+  fresh vim/global.vim
+fresh-options
