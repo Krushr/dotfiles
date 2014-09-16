@@ -25,6 +25,7 @@ fresh jasoncodes/dotfiles bin/adduser --bin
 fresh jasoncodes/dotfiles bin/wemux/\* --bin
 
 fresh-options --file=~/.vimrc --marker=\"
+  fresh vim/leader.vim
   fresh twe4ked/dotfiles vim/vundle_before.vim
   fresh vim/vundle.vim
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
@@ -32,7 +33,6 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/plugins/ack.vim
   fresh hackling/dotfiles vim/plugins/surround.vim
   fresh twe4ked/dotfiles vim/vundle_after.vim
-  fresh vim/leader.vim
   fresh jasoncodes/dotfiles vim/config/backups.vim
   fresh jasoncodes/dotfiles vim/config/undo.vim
   fresh jasoncodes/dotfiles vim/config/format.vim
