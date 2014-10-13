@@ -1,7 +1,5 @@
 Bundle 'airblade/vim-gitgutter'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
