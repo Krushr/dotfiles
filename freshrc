@@ -22,6 +22,7 @@ fresh twe4ked/dotfiles config/ackrc --file
 fresh twe4ked/dotfiles bin/heroku-remote-add --bin
 fresh twe4ked/dotfiles bin/build_status --bin
 fresh jasoncodes/dotfiles bin/adduser --bin
+fresh jasoncodes/dotfiles config/tmux.conf --file
 fresh jasoncodes/dotfiles bin/wemux/\* --bin
 
 fresh-options --file=~/.vimrc --marker=\"

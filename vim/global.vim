@@ -57,10 +57,10 @@ set laststatus=2
 if !has("gui")
   let loaded_bookmarks = 0
 endif
-set background=dark
 set cursorline
 
-colorscheme rdark-terminal
+colorscheme flatlandia
+set background=dark
 
 " Required for textobjs
 runtime macros/matchit.vim

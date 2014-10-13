@@ -12,4 +12,4 @@ Bundle 'upAndDown'
 Bundle 'chreekat/vim-paren-crosshairs'
 
 " Colors
-Bundle 'rdark-terminal'
+Bundle 'jordwalke/flatlandia'
