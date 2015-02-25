@@ -59,8 +59,7 @@ if !has("gui")
 endif
 set cursorline
 
-colorscheme flatlandia
-set background=dark
+colorscheme gotham256
 
 " Required for textobjs
 runtime macros/matchit.vim
