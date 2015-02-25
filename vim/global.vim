@@ -59,7 +59,8 @@ if !has("gui")
 endif
 set cursorline
 
-colorscheme gotham256
+colorscheme gruvbox
+set bg=dark
 
 " Required for textobjs
 runtime macros/matchit.vim

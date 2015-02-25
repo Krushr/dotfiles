@@ -12,5 +12,6 @@ Bundle 'chreekat/vim-paren-crosshairs'
 " Colors
 Bundle 'jordwalke/flatlandia'
 Bundle 'whatyouhide/gotham'
+Bundle 'morhetz/gruvbox'
 
 Bundle 'pangloss/vim-javascript'
