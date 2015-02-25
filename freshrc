@@ -34,6 +34,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/plugins/ack.vim
   fresh hackling/dotfiles vim/plugins/surround.vim
   fresh nathanaelkane/dotfiles vim/plugins/indent-guides.vim
+  fresh nathanaelkane/dotfiles vim/plugins/kompleter.vim
   fresh twe4ked/dotfiles vim/vundle_after.vim
   fresh jasoncodes/dotfiles vim/config/backups.vim
   fresh jasoncodes/dotfiles vim/config/undo.vim
