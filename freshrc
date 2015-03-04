@@ -24,6 +24,7 @@ fresh twe4ked/dotfiles bin/build_status --bin
 fresh jasoncodes/dotfiles bin/adduser --bin
 fresh jasoncodes/dotfiles config/tmux.conf --file
 fresh jasoncodes/dotfiles bin/wemux/\* --bin
+fresh jamesottaway/tmux-up tmux-up --bin
 
 fresh-options --file=~/.vimrc --marker=\"
   fresh vim/leader.vim
