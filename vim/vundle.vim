@@ -1,6 +1,4 @@
 Bundle 'airblade/vim-gitgutter'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-eunuch'
