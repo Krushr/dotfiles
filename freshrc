@@ -30,6 +30,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh vim/leader.vim
   fresh twe4ked/dotfiles vim/vundle_before.vim
   fresh vim/vundle.vim
+  fresh vim/plugins/vim-expand-region.vim
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim
   fresh jasoncodes/dotfiles vim/plugins/ack.vim
