@@ -14,4 +14,5 @@ Bundle 'whatyouhide/gotham'
 Bundle 'morhetz/gruvbox'
 
 Bundle 'pangloss/vim-javascript'
+Bundle 'ludovicchabant/vim-gutentags'
 Bundle 'mxw/vim-jsx'
