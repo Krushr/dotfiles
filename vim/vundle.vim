@@ -4,6 +4,8 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-eunuch'
 Bundle 'emilsoman/spec-outline.vim'
 Bundle 'upAndDown'
+Bundle 'xolox/vim-notes'
+Bundle 'xolox/vim-misc'
 
 " Visual
 Bundle 'chreekat/vim-paren-crosshairs'
