@@ -59,7 +59,7 @@ if !has("gui")
 endif
 set cursorline
 
-colorscheme gruvbox
+colorscheme colorsbox-stnight
 set bg=dark
 
 " Required for textobjs
