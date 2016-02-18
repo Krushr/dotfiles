@@ -45,7 +45,9 @@ set showmatch                              " Briefly jump to a paren once it's b
 set matchtime=2                            " (for only .2 seconds).
 
 " Speed
-set ttyscroll=3
+if !has('nvim')
+  set ttyscroll=3
+endif
 set ttyfast
 set lazyredraw
 
@@ -60,6 +62,9 @@ endif
 set cursorline
 
 let base16colorspace=256  " Access colors present in 256 colorspace
+if has('nvim')
+  set background=dark
+end
 colorscheme base16-eighties
 
 " Required for textobjs

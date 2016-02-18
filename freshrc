@@ -55,3 +55,8 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh nathanaelkane/dotfiles vim/mappings.vim
   fresh vim/global.vim
 fresh-options
+
+fresh_after_build() {
+  ln -sf ~/.vim ~/.config/nvim
+  ln -sf ~/.vimrc ~/.config/nvim/init.vim
+}
