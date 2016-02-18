@@ -25,6 +25,7 @@ fresh jasoncodes/dotfiles bin/adduser --bin
 fresh jasoncodes/dotfiles config/tmux.conf --file
 fresh jasoncodes/dotfiles bin/wemux/\* --bin
 fresh jamesottaway/tmux-up tmux-up --bin
+fresh chriskempson/base16-shell base16-eighties.dark.sh --file=~/base16/eighties.dark.sh
 
 fresh-options --file=~/.vimrc --marker=\"
   fresh vim/leader.vim

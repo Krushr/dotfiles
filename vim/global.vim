@@ -59,8 +59,8 @@ if !has("gui")
 endif
 set cursorline
 
-colorscheme colorsbox-stnight
-set bg=dark
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-eighties
 
 " Required for textobjs
 runtime macros/matchit.vim
