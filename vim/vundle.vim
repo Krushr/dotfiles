@@ -19,7 +19,6 @@ Bundle 'Haron-Prime/Antares'
 Bundle 'chriskempson/base16-vim'
 
 Bundle 'pangloss/vim-javascript'
-Bundle 'ludovicchabant/vim-gutentags'
 Bundle 'mxw/vim-jsx'
 Bundle 'wakatime/vim-wakatime'
 Bundle 'bkad/CamelCaseMotion'
