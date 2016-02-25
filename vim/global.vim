@@ -52,8 +52,6 @@ set ttyfast
 set lazyredraw
 
 " Custom status line
-set statusline=%F%m%r%h%w\ [TYPE=%Y]\ \ \ \ \ \ [POS=%2l,%2v][%p%%]\ \ \ \ \ \ [LEN=%L]
-set laststatus=2
 
 " Terminal Vim
 if !has("gui")

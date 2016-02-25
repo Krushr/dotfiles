@@ -23,3 +23,7 @@ Bundle 'mxw/vim-jsx'
 Bundle 'wakatime/vim-wakatime'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'elixir-lang/vim-elixir'
+
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
+let g:airline_powerline_fonts = 1
