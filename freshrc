@@ -22,10 +22,15 @@ fresh twe4ked/dotfiles config/ackrc --file
 fresh twe4ked/dotfiles bin/heroku-remote-add --bin
 fresh twe4ked/dotfiles bin/build_status --bin
 fresh jasoncodes/dotfiles bin/adduser --bin
-fresh jasoncodes/dotfiles config/tmux.conf --file
 fresh jasoncodes/dotfiles bin/wemux/\* --bin
 fresh jamesottaway/tmux-up tmux-up --bin
 fresh chriskempson/base16-shell base16-eighties.dark.sh --file=~/base16/eighties.dark.sh
+
+
+fresh-options --file=~/.tmux.conf --marker=\#
+  fresh jasoncodes/dotfiles config/tmux.conf
+  fresh config/tmux-theme.conf
+fresh-options
 
 fresh-options --file=~/.vimrc --marker=\"
   fresh vim/leader.vim
