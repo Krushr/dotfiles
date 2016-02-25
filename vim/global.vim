@@ -67,3 +67,5 @@ colorscheme base16-eighties
 
 " Required for textobjs
 runtime macros/matchit.vim
+
+set encoding=utf8
