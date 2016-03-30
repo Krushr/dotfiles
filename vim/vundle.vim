@@ -30,3 +30,5 @@ Bundle 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts = 1
 
 Bundle 'ryanoasis/vim-devicons'
+
+Bundle 'shime/vim-livedown'
