@@ -35,9 +35,10 @@ fresh-options --file=~/.tmux.conf --marker=\#
   fresh config/tmux-theme.conf
 fresh-options
 
-fresh-options --file=~/.vimrc --marker=\"
+fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
+fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh vim/leader.vim
-  fresh twe4ked/dotfiles vim/vundle_before.vim
+  fresh nathanaelkane/dotfiles nvim/plug_begin.vim
   fresh vim/vundle.vim
   fresh vim/plugins/vim-expand-region.vim
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
@@ -49,7 +50,6 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh nathanaelkane/dotfiles vim/plugins/kompleter.vim
   fresh nathanaelkane/dotfiles vim/plugins/nerdtree.vim
   fresh nathanaelkane/dotfiles vim/plugins/easymotion.vim
-  fresh twe4ked/dotfiles vim/vundle_after.vim
   fresh jasoncodes/dotfiles vim/config/backups.vim
   fresh jasoncodes/dotfiles vim/config/undo.vim
   fresh jasoncodes/dotfiles vim/config/format.vim
@@ -59,10 +59,14 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/config/diff.vim
   fresh jasoncodes/dotfiles vim/config/auto_mkdir.vim
   fresh nathanaelkane/dotfiles vim/mappings.vim
+  fresh nathanaelkane/dotfiles nvim/plug_end.vim
   fresh vim/global.vim
 fresh-options
 
+nvim_replace_bundle_with_plug() {
+  gsed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
+}
+
 fresh_after_build() {
-  ln -sf ~/.vim ~/.config/nvim
-  ln -sf ~/.vimrc ~/.config/nvim/init.vim
+  nvim_replace_bundle_with_plug
 }
