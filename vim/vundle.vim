@@ -17,6 +17,7 @@ Bundle 'morhetz/gruvbox'
 Bundle 'mkarmona/colorsbox'
 Bundle 'Haron-Prime/Antares'
 Bundle 'chriskempson/base16-vim'
+Bundle 'w0ng/vim-hybrid'
 
 Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'

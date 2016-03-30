@@ -58,11 +58,10 @@ if !has("gui")
 endif
 set cursorline
 
-let base16colorspace=256  " Access colors present in 256 colorspace
 if has('nvim')
   set background=dark
 end
-colorscheme base16-eighties
+colorscheme hybrid
 
 " Required for textobjs
 runtime macros/matchit.vim
