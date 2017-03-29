@@ -18,13 +18,19 @@ Bundle 'mkarmona/colorsbox'
 Bundle 'Haron-Prime/Antares'
 Bundle 'chriskempson/base16-vim'
 Bundle 'w0ng/vim-hybrid'
+Bundle 'notpratheek/vim-luna'
+Bundle 'vim-scripts/Sorceror'
+Bundle 'tyrannicaltoucan/vim-quantum'
+Bundle 'rakr/vim-two-firewatch'
 
 Bundle 'pangloss/vim-javascript'
 Bundle 'mxw/vim-jsx'
 Bundle 'wakatime/vim-wakatime'
 Bundle 'bkad/CamelCaseMotion'
-Bundle 'elixir-lang/vim-elixir'
 
 Bundle 'ryanoasis/vim-devicons'
 
 Bundle 'shime/vim-livedown'
+
+Bundle 'MattesGroeger/vim-bookmarks'
+Bundle 'vimwiki/vimwiki'

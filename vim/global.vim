@@ -50,18 +50,16 @@ endif
 set ttyfast
 set lazyredraw
 
-" Custom status line
-
 " Terminal Vim
 if !has("gui")
   let loaded_bookmarks = 0
 endif
 set cursorline
 
-if has('nvim')
-  set background=dark
-end
-colorscheme hybrid
+set background=dark
+let g:two_firewatch_italics=1
+colorscheme two-firewatch
+let g:airline_theme='twofirewatch'
 
 " Required for textobjs
 runtime macros/matchit.vim

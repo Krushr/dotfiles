@@ -23,7 +23,9 @@ fresh twe4ked/dotfiles bin/build_status --bin
 fresh jasoncodes/dotfiles bin/adduser --bin
 fresh jasoncodes/dotfiles bin/wemux/\* --bin
 fresh jamesottaway/tmux-up tmux-up --bin
-fresh chriskempson/base16-shell base16-eighties.dark.sh --file=~/base16/eighties.dark.sh
+fresh jasoncodes/dotfiles bin/toggl --bin
+fresh jamesottaway/dotfiles lib/zsh-syntax-highlighting
+fresh zsh-users/zsh-syntax-highlighting . --file=zsh-syntax-highlighting/
 
 fresh-options --file=~/.gitconfig --marker=\#
   fresh config/gitconfig
@@ -32,8 +34,14 @@ fresh-options
 
 fresh-options --file=~/.tmux.conf --marker=\#
   fresh jasoncodes/dotfiles config/tmux.conf
+  fresh nathanaelkane/dotfiles config/tmux/\*
   fresh config/tmux-theme.conf
 fresh-options
+fresh config/\* --file
+
+tmux_remove_utf8_option() {
+  gsed -i '/set-option -g status-utf8 on/d' ~/.fresh/build/tmux.conf
+}
 
 fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
 fresh-options --file=~/.config/nvim/init.vim --marker=\"
@@ -44,7 +52,6 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh vim/plugins
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim
-  fresh jasoncodes/dotfiles vim/plugins/ack.vim
   fresh jasoncodes/dotfiles vim/plugins/tcomment.vim
   fresh jasoncodes/dotfiles vim/plugins/detectindent.vim
   fresh nathanaelkane/dotfiles vim/plugins/indent-guides.vim
@@ -63,10 +70,13 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh vim/global.vim
 fresh-options
 
+fresh git/git contrib/diff-highlight/diff-highlight --bin
+
 nvim_replace_bundle_with_plug() {
   gsed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
 }
 
 fresh_after_build() {
+  tmux_remove_utf8_option
   nvim_replace_bundle_with_plug
 }
