@@ -26,6 +26,7 @@ fresh jamesottaway/tmux-up tmux-up --bin
 fresh jasoncodes/dotfiles bin/toggl --bin
 fresh jamesottaway/dotfiles lib/zsh-syntax-highlighting
 fresh zsh-users/zsh-syntax-highlighting . --file=zsh-syntax-highlighting/
+fresh rupa/z z.sh
 
 fresh-options --file=~/.gitconfig --marker=\#
   fresh config/gitconfig
