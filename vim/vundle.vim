@@ -31,5 +31,4 @@ Bundle 'ryanoasis/vim-devicons'
 
 Bundle 'shime/vim-livedown'
 
-Bundle 'MattesGroeger/vim-bookmarks'
 Bundle 'vimwiki/vimwiki'
