@@ -67,6 +67,7 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh jasoncodes/dotfiles vim/config/diff.vim
   fresh jasoncodes/dotfiles vim/config/auto_mkdir.vim
   fresh nathanaelkane/dotfiles vim/mappings.vim
+  fresh nathanaelkane/dotfiles vim/config/folding.vim
   fresh nathanaelkane/dotfiles nvim/plug_end.vim
   fresh vim/global.vim
 fresh-options
