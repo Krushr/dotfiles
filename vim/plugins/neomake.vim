@@ -1,3 +1,3 @@
-Bundle 'benekastah/neomake'
+Bundle 'neomake/neomake'
 
-autocmd! BufWritePost * Neomake
+autocmd! BufWritePost,BufEnter * Neomake
