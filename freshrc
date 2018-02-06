@@ -36,7 +36,6 @@ fresh-options
 fresh-options --file=~/.tmux.conf --marker=\#
   fresh jasoncodes/dotfiles config/tmux.conf
   fresh nathanaelkane/dotfiles config/tmux/\*
-  fresh config/tmux-theme.conf
 fresh-options
 fresh config/\* --file
 
@@ -71,8 +70,6 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh nathanaelkane/dotfiles nvim/plug_end.vim
   fresh vim/global.vim
 fresh-options
-
-fresh git/git contrib/diff-highlight/diff-highlight --bin
 
 nvim_replace_bundle_with_plug() {
   gsed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
