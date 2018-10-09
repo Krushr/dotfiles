@@ -55,10 +55,9 @@ if !has("gui")
 endif
 set cursorline
 
+colorscheme one
 set background=dark
-let g:two_firewatch_italics=1
-colorscheme two-firewatch
-let g:airline_theme='twofirewatch'
+let g:airline_theme='one'
 
 " Required for textobjs
 runtime macros/matchit.vim

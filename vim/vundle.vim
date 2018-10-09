@@ -32,3 +32,5 @@ Bundle 'ryanoasis/vim-devicons'
 Bundle 'shime/vim-livedown'
 
 Bundle 'vimwiki/vimwiki'
+
+Bundle 'rakr/vim-one'
