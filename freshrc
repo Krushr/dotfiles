@@ -9,9 +9,9 @@
 # See http://freshshell.com/readme for documentation.
 
 fresh freshshell/fresh bin/fresh --bin
-fresh aliases
+fresh aliases/\*
 fresh config/gitignore --file
-fresh shell
+fresh shell/\*
 fresh jasoncodes/dotfiles shell/aliases/rails.sh
 fresh jasoncodes/dotfiles shell/aliases/ruby.sh
 fresh jasoncodes/dotfiles shell/aliases/git.sh
@@ -53,7 +53,7 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh vim/leader.vim
   fresh nathanaelkane/dotfiles nvim/plug_begin.vim
   fresh vim/vundle.vim
-  fresh vim/plugins
+  fresh vim/plugins/\*
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim
   fresh jasoncodes/dotfiles vim/plugins/tcomment.vim
   fresh jasoncodes/dotfiles vim/plugins/detectindent.vim
