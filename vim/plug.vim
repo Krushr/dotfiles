@@ -33,3 +33,4 @@ Plug 'shime/vim-livedown'
 
 Plug 'rakr/vim-one'
 Plug 'sjl/gundo.vim'
+Plug 'simeji/winresizer'
