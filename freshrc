@@ -52,7 +52,7 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh vim/nvim.vim
   fresh vim/leader.vim
   fresh nathanaelkane/dotfiles nvim/plug_begin.vim
-  fresh vim/vundle.vim
+  fresh vim/plug.vim
   fresh vim/plugins/\*
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim
   fresh jasoncodes/dotfiles vim/plugins/tcomment.vim
