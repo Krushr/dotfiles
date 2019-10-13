@@ -30,8 +30,6 @@ fresh jasoncodes/dotfiles bin/toggl --bin
 fresh jasoncodes/ctrlp-modified.vim lib/branch.sh --bin
 fresh jasoncodes/ctrlp-modified.vim lib/branch_modified.sh --bin
 fresh jasoncodes/ctrlp-modified.vim lib/modified.sh --bin
-fresh jamesottaway/dotfiles lib/zsh-syntax-highlighting
-fresh zsh-users/zsh-syntax-highlighting . --file=zsh-syntax-highlighting/
 fresh rupa/z z.sh
 
 fresh-options --file=~/.gitconfig --marker=\#
