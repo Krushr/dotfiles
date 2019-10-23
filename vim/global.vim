@@ -57,7 +57,6 @@ set cursorline
 
 colorscheme one
 set background=dark
-let g:airline_theme='one'
 
 " Required for textobjs
 runtime macros/matchit.vim
