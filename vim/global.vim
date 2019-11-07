@@ -57,6 +57,8 @@ set cursorline
 
 colorscheme one
 set background=dark
+hi ALEVirtualTextError guifg=#e06c75
+hi ALEVirtualTextWarning guifg=#d19a66
 
 " Required for textobjs
 runtime macros/matchit.vim
