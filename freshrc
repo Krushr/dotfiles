@@ -44,7 +44,11 @@ fresh-options
 fresh config/\* --file
 
 tmux_remove_utf8_option() {
-  gsed -i '/set-option -g status-utf8 on/d' ~/.fresh/build/tmux.conf
+  if [[ $OSTYPE == "darwin"* ]]; then
+    gsed -i '/set-option -g status-utf8 on/d' ~/.fresh/build/tmux.conf
+  else
+    sed -i '/set-option -g status-utf8 on/d' ~/.fresh/build/tmux.conf
+  fi
 }
 
 fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
@@ -77,7 +81,11 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
 fresh-options
 
 nvim_replace_bundle_with_plug() {
-  gsed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
+  if [[ $OSTYPE == "darwin"* ]]; then
+    gsed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
+  else
+    sed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
+  fi
 }
 
 fresh_after_build() {
