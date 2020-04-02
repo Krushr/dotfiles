@@ -39,7 +39,7 @@ fresh-options
 
 fresh-options --file=~/.tmux.conf --marker=\#
   fresh jasoncodes/dotfiles config/tmux.conf
-  fresh nathanaelkane/dotfiles config/tmux/\*
+  fresh nathanaelkane/dotfiles config/tmux/ctrlg.conf
 fresh-options
 fresh config/\* --file
 
