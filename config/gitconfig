@@ -2,3 +2,6 @@
 editor = "nvim"
 [alias]
 freshness = "!f() { git for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:cyan)%(refname:short)%(color:reset) | %(committerdate:relative)%(color:reset) | %(subject)' | column -s '|' -t; }; f"
+[user]
+email = "adam@bitrusher.com"
+name = "Adam Hardiman"
