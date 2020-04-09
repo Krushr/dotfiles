@@ -55,9 +55,8 @@ if !has("gui")
 endif
 set cursorline
 
-colorscheme one
-set background=dark
-hi ALEVirtualTextError guifg=#e06c75
+colorscheme base16-materia
+hi ALEVirtualTextError guifg=#EC5F67
 hi ALEVirtualTextWarning guifg=#d19a66
 
 " Required for textobjs

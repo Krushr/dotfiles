@@ -13,4 +13,4 @@ Plug 'chreekat/vim-paren-crosshairs'
 Plug 'ryanoasis/vim-devicons'
 
 " Colors
-Plug 'rakr/vim-one'
+Plug 'chriskempson/base16-vim'
