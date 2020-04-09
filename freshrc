@@ -79,6 +79,10 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh vim/global.vim
 fresh-options
 
+if [[ "$(hostname -s)" == "krushnation" ]]; then
+  fresh picom/picom.conf --file=~/.config/picom/picom.conf
+fi
+
 nvim_replace_bundle_with_plug() {
   if [[ $OSTYPE == "darwin"* ]]; then
     gsed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
