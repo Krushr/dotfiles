@@ -63,3 +63,5 @@ hi ALEVirtualTextWarning guifg=#d19a66
 runtime macros/matchit.vim
 
 set encoding=utf8
+
+set winblend=20

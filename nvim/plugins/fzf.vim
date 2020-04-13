@@ -16,8 +16,20 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
 
 let g:fzf_command_prefix = 'Fzf'
 let g:fzf_layout = {
-  \   'window': 'botright 10split enew',
+  \   'window': 'call FloatingFZF()',
   \ }
+
+function! FloatingFZF()
+  let width = float2nr(&columns * 0.8)
+  let height = float2nr(&lines * 0.6)
+  let opts = { 'relative': 'editor',
+        \ 'row': (&lines - height) / 2,
+        \ 'col': (&columns - width) / 2,
+        \ 'width': width,
+        \ 'height': height }
+
+  call nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
+endfunction
 
 command! -bang FzfModified
   \ call fzf#run(extend({
