@@ -3,3 +3,5 @@
 *.rbc
 /.envrc
 tags
+.solargraph.yml
+config/solargraph_definitions.rb
