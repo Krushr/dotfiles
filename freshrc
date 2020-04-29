@@ -12,13 +12,13 @@ fresh freshshell/fresh bin/fresh --bin
 fresh aliases/\*
 fresh config/gitignore --file
 fresh shell/\*
+fresh shell/config/\*
 fresh jasoncodes/dotfiles shell/config/asdf.sh
 fresh jasoncodes/dotfiles config/asdfrc --file
 fresh jasoncodes/dotfiles shell/aliases/rails.sh
 fresh jasoncodes/dotfiles shell/aliases/ruby.sh
 fresh jasoncodes/dotfiles shell/aliases/git.sh
 fresh jasoncodes/dotfiles shell/config/direnv.sh
-fresh nathanaelkane/dotfiles shell/config/fzf.sh
 fresh jasoncodes/dotfiles config/pryrc --file
 fresh twe4ked/dotfiles config/ackrc --file
 fresh twe4ked/dotfiles bin/heroku-remote-add --bin
