@@ -33,7 +33,6 @@ fresh jasoncodes/ctrlp-modified.vim lib/modified.sh --bin
 fresh rupa/z z.sh
 
 fresh-options --file=~/.gitconfig --marker=\#
-  fresh config/gitconfig
   fresh jasoncodes/dotfiles config/gitconfig
 fresh-options
 
