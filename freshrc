@@ -80,6 +80,11 @@ fresh-options
 
 if [[ "$(hostname -s)" == "krushnation" ]]; then
   fresh picom/picom.conf --file=~/.config/picom/picom.conf
+
+  fresh-options --file=~/.config/alacritty/alacritty.yml --marker=\#
+    fresh alacritty/*
+    fresh aaron-williamson/base16-alacritty colors/base16-materia.yml
+  fresh-options
 fi
 
 nvim_replace_bundle_with_plug() {
