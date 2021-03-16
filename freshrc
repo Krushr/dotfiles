@@ -54,7 +54,7 @@ fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
 fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh vim/nvim.vim
   fresh vim/leader.vim
-  fresh nathanaelkane/dotfiles nvim/plug_begin.vim
+  fresh nathanaelkane/dotfiles vim/plug_begin.vim
   fresh vim/plug.vim
   fresh vim/plugins/\*
   fresh nvim/plugins/\*
@@ -62,7 +62,6 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh jasoncodes/dotfiles vim/plugins/tcomment.vim
   fresh jasoncodes/dotfiles vim/plugins/detectindent.vim
   fresh nathanaelkane/dotfiles vim/plugins/indent-guides.vim
-  fresh nathanaelkane/dotfiles vim/plugins/nerdtree.vim
   fresh nathanaelkane/dotfiles vim/plugins/easymotion.vim
   fresh jasoncodes/dotfiles vim/config/backups.vim
   fresh jasoncodes/dotfiles vim/config/undo.vim
@@ -74,7 +73,7 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh jasoncodes/dotfiles vim/config/auto_mkdir.vim
   fresh nathanaelkane/dotfiles vim/mappings.vim
   fresh nathanaelkane/dotfiles vim/config/folding.vim
-  fresh nathanaelkane/dotfiles nvim/plug_end.vim
+  fresh nathanaelkane/dotfiles vim/plug_end.vim
   fresh vim/global.vim
 fresh-options
 
