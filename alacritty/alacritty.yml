@@ -1,5 +1,6 @@
 window:
   decorations: none
 font:
+  size: 14
   normal:
     family: Iosevka Nerd Font
