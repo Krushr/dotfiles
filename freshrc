@@ -74,6 +74,7 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh nathanaelkane/dotfiles vim/mappings.vim
   fresh nathanaelkane/dotfiles vim/config/folding.vim
   fresh nathanaelkane/dotfiles vim/plug_end.vim
+  fresh nvim/config/\*
   fresh vim/global.vim
 fresh-options
 
