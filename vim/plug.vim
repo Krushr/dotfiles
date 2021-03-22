@@ -11,5 +11,5 @@ Plug 'simeji/winresizer'
 Plug 'chreekat/vim-paren-crosshairs'
 Plug 'ryanoasis/vim-devicons'
 
-" Colors
-Plug 'chriskempson/base16-vim'
+" Colorscheme
+Plug 'ray-x/aurora'
