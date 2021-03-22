@@ -55,7 +55,7 @@ if !has("gui")
 endif
 set cursorline
 
-colorscheme aurora
+colorscheme space-nvim
 hi ALEVirtualTextError guifg=#EC5F67
 hi ALEVirtualTextWarning guifg=#d19a66
 

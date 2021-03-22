@@ -12,4 +12,4 @@ Plug 'chreekat/vim-paren-crosshairs'
 Plug 'ryanoasis/vim-devicons'
 
 " Colorscheme
-Plug 'ray-x/aurora'
+Plug 'Th3Whit3Wolf/space-nvim'
