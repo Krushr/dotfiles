@@ -82,7 +82,7 @@ if [[ "$(hostname -s)" == "krushnation" ]]; then
 
   fresh-options --file=~/.config/alacritty/alacritty.yml --marker=\#
     fresh alacritty/*
-    fresh aaron-williamson/base16-alacritty colors/base16-materia.yml
+    fresh aaron-williamson/base16-alacritty colors/base16-spacemacs.yml
   fresh-options
 fi
 
