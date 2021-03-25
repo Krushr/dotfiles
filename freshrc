@@ -82,8 +82,8 @@ if [[ "$(hostname -s)" == "krushnation" ]]; then
   fresh picom/picom.conf --file=~/.config/picom/picom.conf
 
   fresh-options --file=~/.config/alacritty/alacritty.yml --marker=\#
-    fresh alacritty/*
-    fresh aaron-williamson/base16-alacritty colors/base16-spacemacs.yml
+    fresh alacritty/alacritty.yml
+    fresh alacritty/colors.yml
   fresh-options
 fi
 

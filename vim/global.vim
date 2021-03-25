@@ -55,13 +55,11 @@ if !has("gui")
 endif
 set cursorline
 
-colorscheme space-nvim
-hi ALEVirtualTextError guifg=#EC5F67
-hi ALEVirtualTextWarning guifg=#d19a66
-
 " Required for textobjs
 runtime macros/matchit.vim
 
 set encoding=utf8
 
 set winblend=20
+
+colorscheme edge

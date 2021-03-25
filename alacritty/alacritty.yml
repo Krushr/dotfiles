@@ -1,6 +1,6 @@
 window:
   decorations: none
 font:
-  size: 14
+  size: 12
   normal:
-    family: CaskaydiaCove Nerd Font Mono
+    family: Cascadia Code iCursive Dk
