@@ -10,3 +10,4 @@ Plug 'simeji/winresizer'
 " Visual
 Plug 'chreekat/vim-paren-crosshairs'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'norcalli/nvim-colorizer.lua'
