@@ -62,4 +62,5 @@ set encoding=utf8
 
 set winblend=20
 
-colorscheme edge
+" Colors
+colorscheme onedark_nvim
