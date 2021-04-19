@@ -78,7 +78,7 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh vim/global.vim
 fresh-options
 
-if [[ "$(hostname -s)" == "krushnation" ]]; then
+if [[ "$(uname)" == "Linux" ]]; then
   fresh picom/picom.conf --file=~/.config/picom/picom.conf
 
   fresh-options --file=~/.config/alacritty/alacritty.yml --marker=\#
