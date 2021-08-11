@@ -1,4 +1,3 @@
-Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-eunuch'
@@ -11,3 +10,5 @@ Plug 'simeji/winresizer'
 Plug 'chreekat/vim-paren-crosshairs'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'norcalli/nvim-colorizer.lua'
+
+Plug 'lewis6991/gitsigns.nvim'
