@@ -12,3 +12,5 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'norcalli/nvim-colorizer.lua'
 
 Plug 'lewis6991/gitsigns.nvim'
+
+Plug 'shaunsingh/nord.nvim'
