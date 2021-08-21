@@ -61,7 +61,6 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim
   fresh jasoncodes/dotfiles vim/plugins/tcomment.vim
   fresh jasoncodes/dotfiles vim/plugins/detectindent.vim
-  fresh nathanaelkane/dotfiles vim/config/indent_guides.vim
   fresh nathanaelkane/dotfiles vim/plugins/easymotion.vim
   fresh jasoncodes/dotfiles vim/config/backups.vim
   fresh jasoncodes/dotfiles vim/config/undo.vim
