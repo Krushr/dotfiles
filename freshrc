@@ -94,6 +94,11 @@ fresh-options --file=~/.config/kitty/kitty.conf --marker=\#
   fresh m8mble/nord-kitty nord-kitty.conf
 fresh-options
 
+if [[ "$(uname)" == "Darwin" ]]; then
+  fresh yabai/skhdrc --file
+  fresh yabai/yabairc --file
+fi
+
 nvim_replace_bundle_with_plug() {
   if [[ $OSTYPE == "darwin"* ]]; then
     gsed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
