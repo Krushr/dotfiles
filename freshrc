@@ -85,7 +85,7 @@ if [[ "$(uname)" == "Linux" ]]; then
     fresh alacritty/colors.yml
   fresh-options
 
-  fresh config/bspwm/\* --file=~/.config/bspwm/bspwmrc --marker=\#
+  fresh config/bspwm/bspwmrc --bin=~/.config/bspwm/bspwmrc
   fresh config/sxhkd/\* --file=~/.config/sxhkd/sxhkdrc --marker=\#
 fi
 
