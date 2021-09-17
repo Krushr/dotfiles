@@ -45,15 +45,16 @@ local on_attach = function(client, bufnr)
   })
 end
 
+-- nvim-cmp supports additional completion capabilities
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = { 'solargraph', 'html', 'tsserver', 'cssls', 'rust_analyzer' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
-    flags = {
-      debounce_text_changes = 150,
-    }
+    capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities),
   }
 end
 
