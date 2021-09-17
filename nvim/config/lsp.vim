@@ -48,14 +48,26 @@ end
 -- nvim-cmp supports additional completion capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
--- Use a loop to conveniently call 'setup' on multiple servers and
--- map buffer local keybindings when the language server attaches
-local servers = { 'solargraph', 'html', 'tsserver', 'cssls', 'rust_analyzer' }
-for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
-    on_attach = on_attach,
-    capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities),
-  }
+local function setup_servers()
+  require('lspinstall').setup()
+
+  -- Use a loop to conveniently call 'setup' on installed servers and
+  -- map buffer local keybindings when the language server attaches
+  local servers = require('lspinstall').installed_servers()
+  for _, lsp in ipairs(servers) do
+    nvim_lsp[lsp].setup {
+      on_attach = on_attach,
+      capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities),
+    }
+  end
+end
+
+setup_servers()
+
+-- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
+require('lspinstall').post_install_hook = function ()
+  setup_servers() -- reload installed servers
+  vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
 end
 
 require('lspkind').init({
