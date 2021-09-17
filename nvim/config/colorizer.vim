@@ -1,4 +1,4 @@
-lua <<
+lua <<EOF
   require 'colorizer'.setup(
     {'*';},
     {
@@ -12,4 +12,4 @@ lua <<
       css_fn   = true;         -- Enable all CSS *functions*: rgb_fn, hsl_fn
     }
   )
-.
+EOF
