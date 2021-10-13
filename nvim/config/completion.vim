@@ -27,8 +27,8 @@ lua <<EOF
       ['<C-e>'] = cmp.mapping.close(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
       ["<Tab>"] = cmp.mapping(function(fallback)
-        if vim.fn.pumvisible() == 1 then
-          feedkey("<C-n>", "n")
+        if cmp.visible() then
+          cmp.select_next_item()
         elseif vim.fn["vsnip#available"]() == 1 then
           feedkey("<Plug>(vsnip-expand-or-jump)", "")
         elseif has_words_before() then
@@ -38,8 +38,8 @@ lua <<EOF
         end
       end, { "i", "s" }),
       ["<S-Tab>"] = cmp.mapping(function()
-        if vim.fn.pumvisible() == 1 then
-          feedkey("<C-p>", "n")
+        if cmp.visible() then
+          cmp.select_prev_item()
         elseif vim.fn["vsnip#jumpable"](-1) == 1 then
           feedkey("<Plug>(vsnip-jump-prev)", "")
         end
