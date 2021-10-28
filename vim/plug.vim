@@ -13,4 +13,4 @@ Plug 'norcalli/nvim-colorizer.lua'
 
 Plug 'lewis6991/gitsigns.nvim'
 
-Plug 'shaunsingh/nord.nvim'
+Plug 'EdenEast/nightfox.nvim'

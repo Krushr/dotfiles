@@ -64,4 +64,4 @@ set encoding=utf8
 set winblend=20
 
 " Colors
-colorscheme nord
+colorscheme nightfox
