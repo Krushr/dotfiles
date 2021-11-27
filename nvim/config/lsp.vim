@@ -1,5 +1,16 @@
 lua << EOF
 local nvim_lsp = require('lspconfig')
+local lsp_installer = require('nvim-lsp-installer')
+
+lsp_installer.settings({
+  ui = {
+    icons = {
+      server_installed = "✓",
+      server_pending = "➜",
+      server_uninstalled = "✗"
+      }
+    }
+})
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -47,28 +58,13 @@ end
 
 -- nvim-cmp supports additional completion capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local function setup_servers()
-  require('lspinstall').setup()
-
-  -- Use a loop to conveniently call 'setup' on installed servers and
-  -- map buffer local keybindings when the language server attaches
-  local servers = require('lspinstall').installed_servers()
-  for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {
-      on_attach = on_attach,
-      capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities),
-    }
-  end
-end
-
-setup_servers()
-
--- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
-require('lspinstall').post_install_hook = function ()
-  setup_servers() -- reload installed servers
-  vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
-end
+lsp_installer.on_server_ready(function(server)
+  local options = { on_attach=on_attach, capabilities=capabilities }
+  -- this is the same as lspconfig's setup function
+  server:setup(options)
+end)
 
 require('lspkind').init({
     -- enables text annotations
