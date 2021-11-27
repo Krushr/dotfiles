@@ -10,6 +10,7 @@ Plug 'simeji/winresizer'
 Plug 'chreekat/vim-paren-crosshairs'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'lewis6991/gitsigns.nvim'
 

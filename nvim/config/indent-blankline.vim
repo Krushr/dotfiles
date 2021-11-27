@@ -1,8 +1,11 @@
-Plug 'lukas-reineke/indent-blankline.nvim'
+lua << EOF
+vim.opt.list = true
+vim.opt.listchars:append("space:⋅")
+vim.opt.listchars:append("eol:↴")
 
-let g:indent_blankline_char = '│'
-let g:indent_blankline_show_first_indent_level = v:false
-let g:indent_blankline_filetype_exclude = ['help']
-let g:indent_blankline_buftype_exclude = ['terminal', 'NvimTree']
-let g:indent_blankline_space_char = '·'
-let g:indent_blankline_use_treesitter = v:true
+require("indent_blankline").setup {
+  show_end_of_line = true,
+  space_char_blankline = "⋅",
+  show_current_context = true,
+}
+EOF
