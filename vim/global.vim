@@ -18,6 +18,7 @@ set smartcase                              " Switch to case sensitive mode if ne
 set modelines=1
 set noequalalways                          " Don't make windows the same size after splitting or closing a window
 set mouse=nv                               " Enable mouse in Normal & Visual modes
+set signcolumn=auto:4                      " Allow up to 4 signs in sign column
 
 " Indentation
 set shiftwidth=2                           " Number of spaces to use in each autoindent step

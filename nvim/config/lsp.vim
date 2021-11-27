@@ -47,13 +47,6 @@ local on_attach = function(client, bufnr)
   elseif client.resolved_capabilities.document_range_formatting then
     buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
   end
-
-  require('lsp_signature').on_attach({
-    bind = true,
-    handler_opts = {
-      border = 'single'
-    }
-  })
 end
 
 -- nvim-cmp supports additional completion capabilities
@@ -62,6 +55,18 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 lsp_installer.on_server_ready(function(server)
   local options = { on_attach=on_attach, capabilities=capabilities }
+  if server.name == "solargraph" then
+    options = {
+      on_attach = on_attach,
+      capabilities = capabilities,
+      settings = {
+        solargraph = {
+          diagnostics = true,
+          useBundler = true,
+        }
+      }
+    }
+  end
   -- this is the same as lspconfig's setup function
   server:setup(options)
 end)
