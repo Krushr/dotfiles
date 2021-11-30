@@ -15,3 +15,5 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'EdenEast/nightfox.nvim'
+
+Plug 'windwp/nvim-autopairs'
