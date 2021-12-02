@@ -17,3 +17,4 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'EdenEast/nightfox.nvim'
 
 Plug 'windwp/nvim-autopairs'
+Plug 'rcarriga/nvim-notify'
