@@ -43,20 +43,12 @@ yabai -m config right_padding                12
 yabai -m config window_gap                   12
 yabai -m config external_bar                 all:25:0
 
-# create 5 spaces on startup
-yabai -m space --create
-yabai -m space --create
-yabai -m space --create
-yabai -m space --create
-yabai -m space --create
-
 # specific space settngs
-yabai -m config --space 4 layout float
+# yabai -m config --space 4 layout float
 
 # rules
 # float system prefernces
 yabai -m rule --add app="^System Preferences$" manage=off
-yabai -m rule --add app="kitty" opacity=0.9
 yabai -m rule --add app="Dash" manage=off
 yabai -m rule --add app="Toggl Track" manage=off sticky=on
 yabai -m rule --add app="Slack" space=4
