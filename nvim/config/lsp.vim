@@ -12,7 +12,7 @@ lsp_installer.settings({
     }
 })
 
-require("null-ls").config({
+require("null-ls").setup({
     sources = {
         require("null-ls").builtins.formatting.prettier,
     },
@@ -77,11 +77,6 @@ lsp_installer.on_server_ready(function(server)
   -- this is the same as lspconfig's setup function
   server:setup(options)
 end)
-
-require("lspconfig")["null-ls"].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-})
 
 -- Enable diagnostics
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
