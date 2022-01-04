@@ -15,6 +15,8 @@ lsp_installer.settings({
 require("null-ls").setup({
     sources = {
         require("null-ls").builtins.formatting.prettier,
+        require("null-ls").builtins.formatting.rubocop,
+        require("null-ls").builtins.diagnostics.rubocop,
     },
 })
 
