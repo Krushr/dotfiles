@@ -1,6 +1,6 @@
 [core]
 editor = "nvim"
-pager = delta --theme=base16-materia
+pager = delta
 
 [interactive]
 diffFilter = delta --color-only
