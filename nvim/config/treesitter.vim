@@ -10,6 +10,9 @@ lua <<EOF
     },
     autotag = {
       enable = true,
+    },
+    endwise = {
+      enable = true,
     }
   }
 EOF
