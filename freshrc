@@ -65,7 +65,6 @@ fresh-options --file=~/.config/nvim/init.vim --marker=\"
   fresh jasoncodes/dotfiles vim/config/backups.vim
   fresh jasoncodes/dotfiles vim/config/undo.vim
   fresh jasoncodes/dotfiles vim/config/format.vim
-  fresh jasoncodes/dotfiles vim/config/tags.vim
   fresh jasoncodes/dotfiles vim/config/search.vim
   fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
   fresh jasoncodes/dotfiles vim/config/diff.vim
