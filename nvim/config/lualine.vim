@@ -1,3 +1,7 @@
 lua << EOF
-  require('lualine').setup()
+  require('lualine').setup({
+    options = {
+      theme = 'tokyonight'
+    }
+  })
 EOF

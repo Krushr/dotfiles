@@ -65,4 +65,5 @@ set encoding=utf8
 set winblend=20
 
 " Colors
-colorscheme nightfox
+colorscheme tokyonight
+let g:tokyonight_style = "night"
