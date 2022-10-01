@@ -90,7 +90,7 @@ fi
 
 fresh-options --file=~/.config/kitty/kitty.conf --marker=\#
   fresh kitty/kitty.conf
-  fresh m8mble/nord-kitty nord-kitty.conf
+  fresh folke/tokyonight.nvim extras/kitty/tokyonight_night.conf
 fresh-options
 
 if [[ "$(uname)" == "Darwin" ]]; then
