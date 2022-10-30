@@ -1,5 +1,33 @@
 local use = require('packer').use
 
+-- null-ls
+use {
+  "jose-elias-alvarez/null-ls.nvim",
+  config = function()
+    local builtins = require('null-ls').builtins
+    require("null-ls").setup({
+      sources = {
+        builtins.formatting.prettier,
+        builtins.formatting.rubocop,
+        builtins.diagnostics.rubocop,
+        builtins.diagnostics.haml_lint,
+        builtins.diagnostics.eslint,
+      }
+    })
+  end,
+}
+
+local lsp_formatting = function(bufnr)
+  vim.lsp.buf.format({
+    filter = function(client)
+      return client.name == 'null-ls'
+    end,
+    bufnr = bufnr,
+  })
+end
+
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
 local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -21,6 +49,17 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
+
+  if client.supports_method("textDocument/formatting") then
+    vim.api.nvim_clear_autocmds({group = augroup, buffer = bufnr})
+    vim.api.nvim_create_autocmd("BufPreWrite", {
+      group = augroup,
+      buffer = bufnr,
+      callback = function()
+        lsp_formatting(bufnr)
+      end,
+    })
+  end
 end
 
 
@@ -91,3 +130,4 @@ end
 
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
+
