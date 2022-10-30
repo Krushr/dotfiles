@@ -45,8 +45,8 @@ map("", "<Leader>P", '"*P', {desc = 'Paste from system pasteboard'})
 map("", "<Leader>/", ":nohls<CR>", {silent = true, desc = 'Clear current search/highlight'})
 
 -- higlight word/selection without changing position
-map("n", "<Leader>h", ":let view=windsaveview()<CR>*:call winrestview(view)<CR>", {noremap = false, silent = true, desc = 'Highlight current word'})
-map("v", "<Leader>h", ":<C-U>let view=windsaveview()<CR>gv*:<C-U>call winrestview(view)<CR>", {noremap = false, silent = true, desc = 'Highlight current word'})
+map("n", "<Leader>h", ":let view=winsaveview()<CR>*:call winrestview(view)<CR>", {noremap = false, silent = true, desc = 'Highlight current word'})
+map("v", "<Leader>h", ":<C-U>let view=winsaveview()<CR>gv*:<C-U>call winrestview(view)<CR>", {noremap = false, silent = true, desc = 'Highlight current word'})
 
 -- toggle folds with space
 map({"n", "v"}, "<Space>", "za", {desc = "Toggle fold"})
