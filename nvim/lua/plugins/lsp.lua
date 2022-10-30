@@ -49,6 +49,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
+  vim.keymap.set('v', '<leader>ca', vim.lsp.buf.range_code_action, bufopts)
 
   if client.supports_method("textDocument/formatting") then
     vim.api.nvim_clear_autocmds({group = augroup, buffer = bufnr})
