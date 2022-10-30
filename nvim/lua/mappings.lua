@@ -50,6 +50,3 @@ map("v", "<Leader>h", ":<C-U>let view=windsaveview()<CR>gv*:<C-U>call winrestvie
 
 -- toggle folds with space
 map({"n", "v"}, "<Space>", "za", {desc = "Toggle fold"})
-
--- save
-map("", "<Leader>sw", ":up<CR>", {desc = "Save current file"})
