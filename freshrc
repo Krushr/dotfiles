@@ -50,31 +50,7 @@ tmux_remove_utf8_option() {
   fi
 }
 
-fresh junegunn/vim-plug plug.vim --file=~/.config/nvim/autoload/plug.vim
-fresh-options --file=~/.config/nvim/init.vim --marker=\"
-  fresh vim/nvim.vim
-  fresh vim/leader.vim
-  fresh nathanaelkane/dotfiles vim/plug_begin.vim
-  fresh vim/plug.vim
-  fresh vim/plugins/\*
-  fresh nvim/plugins/\*
-  fresh jasoncodes/dotfiles vim/plugins/ruby.vim
-  fresh jasoncodes/dotfiles vim/plugins/tcomment.vim
-  fresh jasoncodes/dotfiles vim/plugins/detectindent.vim
-  fresh nathanaelkane/dotfiles vim/plugins/easymotion.vim
-  fresh jasoncodes/dotfiles vim/config/backups.vim
-  fresh jasoncodes/dotfiles vim/config/undo.vim
-  fresh jasoncodes/dotfiles vim/config/format.vim
-  fresh jasoncodes/dotfiles vim/config/search.vim
-  fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
-  fresh jasoncodes/dotfiles vim/config/diff.vim
-  fresh jasoncodes/dotfiles vim/config/auto_mkdir.vim
-  fresh nathanaelkane/dotfiles vim/mappings.vim
-  fresh nathanaelkane/dotfiles vim/config/folding.vim
-  fresh nathanaelkane/dotfiles vim/plug_end.vim
-  fresh nvim/config/\*
-  fresh vim/global.vim
-fresh-options
+fresh nvim --file=~/.config/nvim/
 
 if [[ "$(uname)" == "Linux" ]]; then
   fresh picom/picom.conf --file=~/.config/picom/picom.conf
@@ -98,15 +74,11 @@ if [[ "$(uname)" == "Darwin" ]]; then
   fresh yabai/yabairc --file
 fi
 
-nvim_replace_bundle_with_plug() {
-  if [[ $OSTYPE == "darwin"* ]]; then
-    gsed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
-  else
-    sed -i 's/Bundle/Plug/' ~/.fresh/build/config-nvim-init.vim
-  fi
+nvim_compile_packer_loader() {
+  nvim --headless -c 'autocmd User PackerCompileDone quitall' -c 'PackerCompile'
 }
 
 fresh_after_build() {
   tmux_remove_utf8_option
-  nvim_replace_bundle_with_plug
+  nvim_compile_packer_loader
 }

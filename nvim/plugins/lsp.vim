@@ -1,6 +1,0 @@
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/lsp_extensions.nvim'
-Plug 'onsails/lspkind-nvim'
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'folke/trouble.nvim'
-Plug 'jose-elias-alvarez/null-ls.nvim'
