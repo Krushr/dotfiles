@@ -62,3 +62,4 @@ use {
 }
 
 use "tpope/vim-rake"
+use "kchmck/vim-coffee-script"
