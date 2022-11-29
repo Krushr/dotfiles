@@ -9,6 +9,7 @@ use {
 
     local map = vim.keymap.set
     local directions = require('hop.hint').HintDirection
+    local positions = require('hop.hint').HintPosition
     map('', '<Leader>ef', function()
       hop.hint_char1({ direction = directions.AFTER_CURSOR, current_line_only = true })
     end, {desc = 'Jump to character'})
@@ -24,6 +25,9 @@ use {
     map('', '<Leader>ew', function()
       hop.hint_words({ direction = directions.AFTER_CURSOR })
     end, {desc = 'Jump to word'})
+    map('', '<Leader>ee', function()
+      hop.hint_words({ direction = directions.AFTER_CURSOR, hint_position = positions.END })
+    end, {desc = 'Jump to word end'})
     map('', '<Leader>eb', function()
       hop.hint_words({ direction = directions.BEFORE_CURSOR })
     end, {desc = 'Jump backward to word'})
