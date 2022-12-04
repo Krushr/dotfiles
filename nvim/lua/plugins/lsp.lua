@@ -9,7 +9,6 @@ use {
       sources = {
         builtins.formatting.prettier,
         builtins.formatting.rubocop,
-        builtins.formatting.stylua,
         builtins.diagnostics.rubocop,
         builtins.diagnostics.haml_lint,
         builtins.diagnostics.eslint,
