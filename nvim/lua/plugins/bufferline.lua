@@ -1,8 +1,8 @@
-local use = require('packer').use
-
-use {
+return {
   'akinsho/bufferline.nvim',
-  tag = "v3.*",
+  dependencies = {
+    'folke/tokyonight.nvim',
+  },
   config = function()
     require('bufferline').setup({
       options = {

@@ -1,5 +1,4 @@
 require("settings")
 require("mappings")
-require("plugins")
-
+require("config.lazy")
 vim.cmd "color tokyonight"

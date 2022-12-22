@@ -1,8 +1,12 @@
-local use = require('packer').use
-
-use {
+return {
   'nvim-treesitter/nvim-treesitter',
-  run = ':TSUpdate',
+  build = ':TSUpdate',
+  dependencies = {
+    'nvim-treesitter/nvim-treesitter-context',
+    'p00f/nvim-ts-rainbow',
+    'windwp/nvim-ts-autotag',
+    'RRethy/nvim-treesitter-endwise',
+  },
   config = function()
     require('nvim-treesitter.configs').setup {
       ensure_installed = "all",
@@ -22,7 +26,3 @@ use {
     }
   end
 }
-use {'nvim-treesitter/nvim-treesitter-context', requires = "nvim-treesitter/nvim-treesitter"}
-use {'p00f/nvim-ts-rainbow', requires = 'nvim-treesitter/nvim-treesitter'}
-use {'windwp/nvim-ts-autotag', requires = 'nvim-treesitter/nvim-treesitter'}
-use {'RRethy/nvim-treesitter-endwise', requires = 'nvim-treesitter/nvim-treesitter'}

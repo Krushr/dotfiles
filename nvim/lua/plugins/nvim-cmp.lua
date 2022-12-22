@@ -1,10 +1,15 @@
-local use = require('packer').use
-
---[[
-" Completion sources
-]]--
-use {
+return {
   'hrsh7th/nvim-cmp',
+  dependencies = {
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/vim-vsnip',
+    'hrsh7th/cmp-vsnip',
+    'hrsh7th/cmp-cmdline',
+    'hrsh7th/cmp-nvim-lsp-document-symbol',
+    'hrsh7th/cmp-nvim-lsp-signature-help',
+    'hrsh7th/cmp-path',
+  },
   config = function()
     local has_words_before = function()
       local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -79,11 +84,3 @@ use {
 }
 
 
-use 'hrsh7th/cmp-nvim-lsp'
-use 'hrsh7th/cmp-buffer'
-use 'hrsh7th/vim-vsnip'
-use 'hrsh7th/cmp-vsnip'
-use 'hrsh7th/cmp-cmdline'
-use 'hrsh7th/cmp-nvim-lsp-document-symbol'
-use 'hrsh7th/cmp-nvim-lsp-signature-help'
-use 'hrsh7th/cmp-path'

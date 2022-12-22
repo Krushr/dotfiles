@@ -1,6 +1,4 @@
-local use = require('packer').use
-
-use {
+return {
   'folke/which-key.nvim',
   config = function()
     require('which-key').setup()

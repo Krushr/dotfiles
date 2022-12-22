@@ -1,11 +1,10 @@
-local use = require('packer').use
-
-
-use 'nvim-lua/popup.nvim'
-
-use {
+return {
   'nvim-telescope/telescope.nvim',
-  requires = {'nvim-lua/plenary.nvim'},
+  dependencies = {
+    'nvim-lua/plenary.nvim',
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    'nvim-telescope/telescope-live-grep-args.nvim'
+  },
   config = function()
     local actions = require('telescope.actions')
     require('telescope').setup {
@@ -36,6 +35,3 @@ use {
     map('n', '<Leader>cd', builtin.diagnostics, {desc = 'List LSP diagnostics'})
   end,
 }
-
-use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-use 'nvim-telescope/telescope-live-grep-args.nvim'

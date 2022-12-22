@@ -1,6 +1,4 @@
-local use = require('packer').use
-
-use {
+return {
   'NvChad/nvim-colorizer.lua',
   config = function()
     require 'colorizer'.setup({

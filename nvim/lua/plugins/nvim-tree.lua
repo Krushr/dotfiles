@@ -1,8 +1,6 @@
-local use = require('packer').use
-
-use {
+return {
   'nvim-tree/nvim-tree.lua',
-  requires = {
+  dependencies = {
     'nvim-tree/nvim-web-devicons'
   },
   config = function()
