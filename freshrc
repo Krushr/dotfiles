@@ -74,11 +74,6 @@ if [[ "$(uname)" == "Darwin" ]]; then
   fresh yabai/yabairc --file
 fi
 
-nvim_compile_packer_loader() {
-  nvim --headless -c 'autocmd User PackerCompileDone quitall' -c 'PackerCompile'
-}
-
 fresh_after_build() {
   tmux_remove_utf8_option
-  nvim_compile_packer_loader
 }
