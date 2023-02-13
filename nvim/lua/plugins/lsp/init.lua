@@ -33,6 +33,18 @@ function M.config()
 		function(server_name)
 			require("lspconfig")[server_name].setup(options)
 		end,
+		["solargraph"] = function()
+			local solargraphOpts = options
+			require("lspconfig").solargraph.setup({
+				options,
+				settings = {
+					solargraph = {
+						diagnostics = true,
+						useBundler = true,
+					},
+				},
+			})
+		end,
 	})
 	require("plugins.null-ls").setup(options)
 end

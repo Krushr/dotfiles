@@ -7,9 +7,7 @@ function M.setup(options)
 	nls.setup({
 		sources = {
 			nls.builtins.formatting.prettier,
-			nls.builtins.formatting.rubocop,
 			nls.builtins.formatting.stylua,
-			nls.builtins.diagnostics.rubocop,
 			nls.builtins.diagnostics.haml_lint,
 			nls.builtins.diagnostics.eslint,
 		},
