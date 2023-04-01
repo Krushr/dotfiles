@@ -2,7 +2,6 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	dependencies = {
-		"nvim-treesitter/nvim-treesitter-context",
 		"HiPhish/nvim-ts-rainbow2",
 		"windwp/nvim-ts-autotag",
 		"RRethy/nvim-treesitter-endwise",
