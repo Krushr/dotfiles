@@ -23,7 +23,6 @@ return {
 				query = {
 					"rainbow-parens",
 					html = "rainbow-tags",
-					javascript = "rainbow-tags-react",
 				},
 			},
 			autotag = {
