@@ -25,14 +25,16 @@ return {
 		require("telescope").load_extension("fzf")
 		require("telescope").load_extension("live_grep_args")
 
-		local map = vim.keymap.set
+		local map = function(key, func, desc)
+			vim.keymap.set("n", key, func, { desc = desc })
+		end
 		local builtin = require("telescope.builtin")
-		map("n", "<Leader>t", builtin.git_files, { desc = "Find files (git)" })
-		map("n", "<Leader>fa", builtin.find_files, { desc = "Find files (all)" })
-		map("n", "<Leader>ff", require("telescope").extensions.live_grep_args.live_grep_args, { desc = "Live grep" })
-		map("n", "<Leader>l", builtin.buffers, { desc = "List open buffers" })
-		map("n", "<Leader>m", builtin.git_status, { desc = "List modified files" })
-		map("n", "<Leader>cf", builtin.current_buffer_fuzzy_find, { desc = "Find in current file" })
-		map("n", "<Leader>cd", builtin.diagnostics, { desc = "List LSP diagnostics" })
+		map("<Leader>t", builtin.git_files, "Find files (git)")
+		map("<Leader>fa", builtin.find_files, "Find files (all)")
+		map("<Leader>ff", require("telescope").extensions.live_grep_args.live_grep_args, "Live grep")
+		map("<Leader>l", builtin.buffers, "List open buffers")
+		map("<Leader>m", builtin.git_status, "List modified files")
+		map("<Leader>cf", builtin.current_buffer_fuzzy_find, "Find in current file")
+		map("<Leader>cd", builtin.diagnostics, "List LSP diagnostics")
 	end,
 }

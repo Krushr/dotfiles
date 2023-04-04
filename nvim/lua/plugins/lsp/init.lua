@@ -34,7 +34,6 @@ function M.config()
 			require("lspconfig")[server_name].setup(options)
 		end,
 		["solargraph"] = function()
-			local solargraphOpts = options
 			require("lspconfig").solargraph.setup({
 				options,
 				settings = {
