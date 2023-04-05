@@ -16,36 +16,42 @@ function M.config()
 
 	local capabilities = vim.lsp.protocol.make_client_capabilities()
 	capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
-	capabilities.textDocument.foldingRange = {
-		dynamicRegistration = false,
-		lineFoldingOnly = true,
+
+	local servers = {
+		solargraph = {
+			diagnostics = true,
+			useBundler = true,
+		},
+		lua_ls = {
+			Lua = {
+				telemetry = { enable = false },
+				workspace = { checkThirdParty = false },
+			},
+		},
 	}
 
-	local options = {
+	local mason_lspconfig = require("mason-lspconfig")
+
+	mason_lspconfig.setup({
+		ensure_installed = vim.tbl_keys(servers),
+	})
+
+	mason_lspconfig.setup_handlers({
+		function(server_name)
+			require("lspconfig")[server_name].setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+				settings = servers[server_name],
+			})
+		end,
+	})
+	require("plugins.null-ls").setup({
 		on_attach = on_attach,
 		capabilities = capabilities,
 		flags = {
 			debounce_text_changes = 150,
 		},
-	}
-
-	require("mason-lspconfig").setup_handlers({
-		function(server_name)
-			require("lspconfig")[server_name].setup(options)
-		end,
-		["solargraph"] = function()
-			require("lspconfig").solargraph.setup({
-				options,
-				settings = {
-					solargraph = {
-						diagnostics = true,
-						useBundler = true,
-					},
-				},
-			})
-		end,
 	})
-	require("plugins.null-ls").setup(options)
 end
 
 return M
