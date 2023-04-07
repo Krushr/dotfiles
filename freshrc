@@ -51,6 +51,7 @@ tmux_remove_utf8_option() {
 }
 
 fresh nvim --file=~/.config/nvim/
+fresh config/waybar --file=~/.config/waybar/
 fresh wezterm/wezterm.lua --file
 
 if [[ "$(uname)" == "Linux" ]]; then

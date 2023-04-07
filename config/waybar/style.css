@@ -1,0 +1,112 @@
+@import "tokyonight.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: Hack Nerd Font;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: @bg;
+  color: @text;
+  opacity: 0.9;
+}
+
+tooltip {
+  background: @bg_dark;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #11111b;
+}
+
+#workspaces button {
+  padding: 5px;
+  color: @comment;
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  color: @text;
+}
+
+#workspaces button.focused {
+  background: @blue;
+}
+
+#workspaces button.urgent {
+  background: @red1;
+}
+
+#workspaces button:hover {
+  background: @dark3;
+  color: @text;
+}
+
+#clock,
+#battery,
+#pulseaudio,
+#cpu,
+#memory,
+#network,
+#workspaces,
+#tray,
+#workspaces,
+#backlight,
+#custom-pacman,
+#custom-session {
+  background: @terminal_black;
+  opacity: 1;
+  padding: 0px 10px;
+  margin: 6px 0px;
+  border-radius: 10px;
+}
+
+#tray {
+  border-radius: 10px;
+}
+
+#workspaces {
+  border-radius: 10px;
+  padding-right: 0px;
+  padding-left: 5px;
+  margin-left: 5px;
+}
+
+#cpu {
+  color: @magenta;
+}
+
+#clock {
+  color: @yellow;
+}
+
+#network {
+  color: @green;
+}
+
+#network.disconnected {
+  color: @red1;
+}
+
+#pulseaudio {
+  color: @purple;
+}
+
+#memory {
+  color: @blue1;
+}
+
+#custom-pacman {
+  color: @cyan;
+}
+
+#custom-session {
+  color: @red;
+  margin-right: 4px;
+}
