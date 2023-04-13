@@ -4,7 +4,7 @@
   "spacing": 4, // Gaps between modules (4px)
 
   // Choose the order of the modules
-  "modules-left": ["wlr/workspaces"],
+  "modules-left": ["wlr/workspaces", "custom/media"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "custom/pacman",
@@ -90,16 +90,33 @@
     "on-click": "pavucontrol"
   },
   "custom/pacman": {
-    "exec": "checkupdates | wc -l",
-    "interval": 300,
-    "format": " {}"
+    "format": "<span font='16' rise='-3000'></span>  {}",
+    "return-type": "json",
+    "exec": "waybar-module-pacman-updates",
+    "exec-if": "which waybar-module-pacman-updates",
+    "on-click": "kitty -e yay"
   },
   "custom/session": {
-    "format": "{icon}",
+    "format": "<span font='16' rise='-3000'>{icon}</span>",
     "format-icons": {
       "default": ""
     },
     "toolip": true,
     "on-click": "wlogout"
+  },
+  "custom/media": {
+    "format": "<span font='16' rise='-3000'>{icon}</span> {}",
+    "format-icons": {
+      "default": "",
+      "chromium": "󰎆"
+    },
+    "escape": true,
+    "return-type": "json",
+    "max-length": 80,
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
   }
 }

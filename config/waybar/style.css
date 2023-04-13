@@ -59,7 +59,8 @@ tooltip {
 #workspaces,
 #backlight,
 #custom-pacman,
-#custom-session {
+#custom-session,
+#custom-media {
   background: @terminal_black;
   opacity: 1;
   padding: 0px 10px;
