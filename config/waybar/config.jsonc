@@ -21,7 +21,7 @@
     "disable-scroll": true,
     "all-outputs": false,
     "on-click": "activate",
-    "format": "{icon}",
+    "format": "<span font=\"16\" rise=\"-3000\">{icon}</span>",
     "format-icons": {
       "1": "",
       "3": "󰈹",
@@ -45,16 +45,16 @@
     "spacing": 10
   },
   "clock": {
-    "format": " {:%H:%M}",
+    "format": "<span font='16' rise='-3000'></span> {:%H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": " {:%A, %b %d %Y}"
   },
   "cpu": {
-    "format": " {usage}%",
+    "format": "<span font='16' rise='-3000'></span> {usage}%",
     "tooltip": false
   },
   "memory": {
-    "format": " {}%"
+    "format": "<span font='16' rise='-3000'></span> {}%"
   },
   "temperature": {
     "critical-threshold": 80,
@@ -63,11 +63,11 @@
   },
   "network": {
     "format": "{ifname}",
-    "format-wifi": " {essid} ({signalStrength}%)",
-    "format-ethernet": " {ifname}",
+    "format-wifi": "<span font='16' rise='-3000'></span> {essid} ({signalStrength}%)",
+    "format-ethernet": "<span font='16' rise='-3000'></span> {ifname}",
     "tooltip-format": "{ifname} via {gwaddr}",
-    "format-linked": " {ifname} (No IP)",
-    "format-disconnected": "⚠ Disconnected",
+    "format-linked": "<span font='16' rise='-3000'></span> {ifname} (No IP)",
+    "format-disconnected": "<span font='16' rise='-3000'>⚠</span> Disconnected",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
