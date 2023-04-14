@@ -2,12 +2,13 @@ local M = {
 	"neovim/nvim-lspconfig",
 	name = "lsp",
 	event = "BufReadPre",
-	dependencies = { "hrsh7th/cmp-nvim-lsp" },
+	dependencies = { "hrsh7th/cmp-nvim-lsp", "folke/neodev.nvim" },
 }
 
 function M.config()
 	require("mason")
 	require("plugins.lsp.diagnostics").setup()
+	require("neodev").setup()
 
 	local function on_attach(client, bufnr)
 		require("plugins.lsp.formatting").setup(client, bufnr)
