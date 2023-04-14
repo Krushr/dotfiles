@@ -3,26 +3,27 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-buffer",
-		"hrsh7th/vim-vsnip",
-		"hrsh7th/cmp-vsnip",
+		"saadparwaiz1/cmp_luasnip",
 		"hrsh7th/cmp-cmdline",
 		"hrsh7th/cmp-nvim-lsp-document-symbol",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"hrsh7th/cmp-path",
+		{
+			"L3MON4D3/LuaSnip",
+			dependencies = "rafamadriz/friendly-snippets",
+			config = function()
+				local luasnip = require("luasnip")
+
+				luasnip.filetype_extend("typescriptreact", { "html", "typescript" })
+				luasnip.filetype_extend("javascriptreact", { "html", "javascript" })
+				luasnip.filetype_extend("ruby", { "rails" })
+			end,
+		},
 	},
 	config = function()
-		local has_words_before = function()
-			local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-			return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-		end
-
-		local feedkey = function(key, mode)
-			vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
-		end
-
-		-- Setup nvim-cmp.
 		local cmp = require("cmp")
 		local lspkind = require("lspkind")
+		local luasnip = require("luasnip")
 
 		cmp.setup({
 			snippet = {
@@ -42,27 +43,27 @@ return {
 				["<Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_next_item()
-					elseif vim.fn["vsnip#available"]() == 1 then
-						feedkey("<Plug>(vsnip-expand-or-jump)", "")
-					elseif has_words_before() then
-						cmp.complete()
+					elseif luasnip.expand_or_jumpable() then
+						luasnip.expand_or_jump()
 					else
-						fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
+						fallback()
 					end
 				end, { "i", "s" }),
-				["<S-Tab>"] = cmp.mapping(function()
+				["<S-Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_prev_item()
-					elseif vim.fn["vsnip#jumpable"](-1) == 1 then
-						feedkey("<Plug>(vsnip-jump-prev)", "")
+					elseif luasnip.jumpable(-1) then
+						luasnip.jump(-1)
+					else
+						fallback()
 					end
 				end, { "i", "s" }),
 			},
 			sources = {
 				{ name = "nvim_lsp" },
-				{ name = "vsnip" },
-				{ name = "buffer" },
+				{ name = "luasnip" },
 				{ name = "nvim_lsp_signature_help" },
+				{ name = "buffer" },
 			},
 			formatting = {
 				format = lspkind.cmp_format({ with_text = true }),
