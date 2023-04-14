@@ -9,9 +9,9 @@ function M.config()
 	require("mason")
 	require("plugins.lsp.diagnostics").setup()
 	require("neodev").setup()
+	require("plugins.lsp.formatting").setup()
 
 	local function on_attach(client, bufnr)
-		require("plugins.lsp.formatting").setup(client, bufnr)
 		require("plugins.lsp.mappings").setup(client, bufnr)
 	end
 
