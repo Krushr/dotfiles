@@ -21,7 +21,7 @@
     "disable-scroll": true,
     "all-outputs": false,
     "on-click": "activate",
-    "format": "<span font=\"16\" rise=\"-3000\">{icon}</span>",
+    "format": "<span font=\"12\" rise=\"-1000\">{icon}</span>",
     "format-icons": {
       "1": "",
       "3": "󰈹",
@@ -45,16 +45,16 @@
     "spacing": 10
   },
   "clock": {
-    "format": "<span font='16' rise='-3000'></span> {:%H:%M}",
+    "format": "<span font='12' rise='-1000'> </span> {:%H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": " {:%A, %b %d %Y}"
   },
   "cpu": {
-    "format": "<span font='16' rise='-3000'></span> {usage}%",
+    "format": "<span font='12' rise='-1000'> </span> {usage}%",
     "tooltip": false
   },
   "memory": {
-    "format": "<span font='16' rise='-3000'></span> {}%"
+    "format": "<span font='12' rise='-1000'> </span> {}%"
   },
   "temperature": {
     "critical-threshold": 80,
@@ -63,11 +63,11 @@
   },
   "network": {
     "format": "{ifname}",
-    "format-wifi": "<span font='16' rise='-3000'></span> {essid} ({signalStrength}%)",
-    "format-ethernet": "<span font='16' rise='-3000'></span> {ifname}",
+    "format-wifi": "<span font='12' rise='-1000'></span> {essid} ({signalStrength}%)",
+    "format-ethernet": "<span font='12' rise='-1000'></span> {ifname}",
     "tooltip-format": "{ifname} via {gwaddr}",
-    "format-linked": "<span font='16' rise='-3000'></span> {ifname} (No IP)",
-    "format-disconnected": "<span font='16' rise='-3000'>⚠</span> Disconnected",
+    "format-linked": "<span font='12' rise='-1000'></span> {ifname} (No IP)",
+    "format-disconnected": "<span font='12' rise='-1000'>⚠</span> Disconnected",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
@@ -90,14 +90,13 @@
     "on-click": "pavucontrol"
   },
   "custom/pacman": {
-    "format": "<span font='16' rise='-3000'></span>  {}",
-    "return-type": "json",
-    "exec": "waybar-module-pacman-updates",
-    "exec-if": "which waybar-module-pacman-updates",
+    "format": "<span font='12' rise='-1000'> </span> {}",
+    "exec": "checkupdates | wc -l",
+    "interval": "900",
     "on-click": "kitty -e yay"
   },
   "custom/session": {
-    "format": "<span font='16' rise='-3000'>{icon}</span>",
+    "format": "<span font='12' rise='-1000'>{icon}</span>",
     "format-icons": {
       "default": ""
     },
@@ -105,7 +104,7 @@
     "on-click": "wlogout"
   },
   "custom/media": {
-    "format": "<span font='16' rise='-3000'>{icon}</span> {}",
+    "format": "<span font='12' rise='-1000'>{icon} </span> {}",
     "format-icons": {
       "default": "",
       "chromium": "󰎆"
