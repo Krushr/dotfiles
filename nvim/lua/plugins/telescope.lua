@@ -20,6 +20,11 @@ return {
 					},
 				},
 			},
+			pickers = {
+				find_files = {
+					find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+				},
+			},
 		})
 
 		require("telescope").load_extension("fzf")
