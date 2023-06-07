@@ -34,8 +34,8 @@ return {
 			vim.keymap.set("n", key, func, { desc = desc })
 		end
 		local builtin = require("telescope.builtin")
-		map("<Leader>t", builtin.git_files, "Find files (git)")
-		map("<Leader>fa", builtin.find_files, "Find files (all)")
+		map("<Leader>t", builtin.find_files, "Find files (all)")
+		map("<Leader>fg", builtin.git_files, "Find files (git)")
 		map("<Leader>ff", require("telescope").extensions.live_grep_args.live_grep_args, "Live grep")
 		map("<Leader>l", builtin.buffers, "List open buffers")
 		map("<Leader>m", builtin.git_status, "List modified files")
