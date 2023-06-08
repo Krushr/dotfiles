@@ -65,6 +65,10 @@ return {
 				{ name = "nvim_lsp_signature_help" },
 				{ name = "buffer" },
 			},
+			window = {
+				completion = cmp.config.window.bordered(),
+				documentation = cmp.config.window.bordered(),
+			},
 			formatting = {
 				format = lspkind.cmp_format({ with_text = true }),
 			},
