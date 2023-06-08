@@ -34,6 +34,8 @@ local options = {
 	-- movement
 	startofline = false, -- avoid moving cursor to start of line when jumping around
 	scrolloff = 10, -- keep 10 context lines above and below cursor
+
+	pumblend = 20, -- make popup-menu (completion etc) transparent
 }
 
 for k, v in pairs(options) do
