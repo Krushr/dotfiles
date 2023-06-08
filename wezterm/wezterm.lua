@@ -16,7 +16,7 @@ end
 config.color_scheme = "tokyonight_night"
 
 config.font = wezterm.font("Jetbrains Mono")
-config.font_size = 12.0
+config.font_size = 14.0
 
 config.hide_tab_bar_if_only_one_tab = true
 
