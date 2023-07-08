@@ -29,6 +29,7 @@ function M.config()
 				workspace = { checkThirdParty = false },
 			},
 		},
+		pyright = {},
 	}
 
 	local mason_lspconfig = require("mason-lspconfig")

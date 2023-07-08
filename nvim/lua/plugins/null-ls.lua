@@ -8,8 +8,11 @@ function M.setup(options)
 		sources = {
 			nls.builtins.formatting.prettier,
 			nls.builtins.formatting.stylua,
+			nls.builtins.formatting.black,
 			nls.builtins.diagnostics.haml_lint,
 			nls.builtins.diagnostics.eslint,
+			nls.builtins.diagnostics.mypy,
+			nls.builtins.diagnostics.ruff,
 		},
 		on_attach = options.on_attach,
 	})
