@@ -30,6 +30,7 @@ function M.config()
 			},
 		},
 		pyright = {},
+		rust_analyzer = {},
 	}
 
 	local mason_lspconfig = require("mason-lspconfig")
