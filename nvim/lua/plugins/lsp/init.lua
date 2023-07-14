@@ -23,6 +23,9 @@ function M.config()
 			diagnostics = true,
 			useBundler = true,
 		},
+		ruby_ls = {
+			formatter = "none",
+		},
 		lua_ls = {
 			Lua = {
 				telemetry = { enable = false },
