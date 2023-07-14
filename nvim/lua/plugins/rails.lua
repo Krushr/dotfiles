@@ -1,5 +1,6 @@
 return {
 	"tpope/vim-rails",
+	ft = "ruby",
 	config = function()
 		vim.g.rails_projections = {
 			["app/controllers/*.rb"] = {
