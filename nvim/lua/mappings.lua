@@ -60,3 +60,6 @@ map(
 
 -- toggle folds with space
 map({ "n", "v" }, "<Space>", "za", { desc = "Toggle fold" })
+
+map("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { desc = "LSP: Toggle Trouble" })
+map("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { desc = "LSP: Toggle Trouble (workspace)" })
