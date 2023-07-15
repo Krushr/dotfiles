@@ -50,6 +50,7 @@ function M.config()
 				settings = servers[server_name],
 			})
 		end,
+		["rust_analyzer"] = function() end,
 	})
 	require("plugins.null-ls").setup({
 		on_attach = on_attach,
