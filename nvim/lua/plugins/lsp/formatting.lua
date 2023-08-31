@@ -37,6 +37,14 @@ function M.setup()
 			local ft = vim.api.nvim_buf_get_option(buf, "filetype")
 			local nls = require("plugins.null-ls")
 
+			local disabled_clients = { "ruby_ls", "solargraph" }
+
+			for _, v in pairs(disabled_clients) do
+				if client.name == v then
+					return
+				end
+			end
+
 			local client_supports_formatting = false
 			if nls.has_formatter(ft) then
 				client_supports_formatting = client.name == "null-ls"
