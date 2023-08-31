@@ -34,6 +34,7 @@ function M.config()
 		},
 		pyright = {},
 		rust_analyzer = {},
+		rubocop = {},
 	}
 
 	local mason_lspconfig = require("mason-lspconfig")
