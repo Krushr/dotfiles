@@ -20,8 +20,10 @@ function M.config()
 
 	local servers = {
 		solargraph = {
-			diagnostics = true,
-			useBundler = true,
+			solargraph = {
+				useBundler = true,
+				diagnostics = false,
+			},
 		},
 		ruby_ls = {
 			formatter = "none",
