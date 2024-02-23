@@ -9,7 +9,6 @@ function M.config()
 	require("mason")
 	require("plugins.lsp.diagnostics").setup()
 	require("neodev").setup()
-	require("plugins.lsp.formatting").setup()
 
 	local function on_attach(client, bufnr)
 		require("plugins.lsp.mappings").setup(client, bufnr)
@@ -54,13 +53,6 @@ function M.config()
 			})
 		end,
 		["rust_analyzer"] = function() end,
-	})
-	require("plugins.null-ls").setup({
-		on_attach = on_attach,
-		capabilities = capabilities,
-		flags = {
-			debounce_text_changes = 150,
-		},
 	})
 end
 
