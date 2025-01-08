@@ -50,7 +50,6 @@ tmux_remove_utf8_option() {
   fi
 }
 
-fresh nvim --file=~/.config/nvim/
 fresh config/waybar --file=~/.config/waybar/
 fresh wezterm/wezterm.lua --file
 
