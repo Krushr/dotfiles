@@ -20,5 +20,7 @@ config.font_size = 14.0
 
 config.hide_tab_bar_if_only_one_tab = true
 
+config.window_background_opacity = 0.9
+
 -- and finally, return the configuration to wezterm
 return config
