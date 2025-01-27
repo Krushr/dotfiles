@@ -26,7 +26,7 @@ setxkbmap -option caps:ctrl_modifier
 lxsession &
 
 # Launch picom
-picom --experimental-backends -bc &
+picom -bc &
 
 # Launch polybar
 ~/.config/polybar/launch.sh
