@@ -18,7 +18,6 @@ fresh jasoncodes/dotfiles config/asdfrc --file
 fresh jasoncodes/dotfiles shell/aliases/rails.sh
 fresh jasoncodes/dotfiles shell/aliases/ruby.sh
 fresh jasoncodes/dotfiles shell/aliases/git.sh
-fresh jasoncodes/dotfiles shell/config/direnv.sh
 fresh jasoncodes/dotfiles config/pryrc --file
 fresh twe4ked/dotfiles config/ackrc --file
 fresh twe4ked/dotfiles bin/heroku-remote-add --bin
@@ -74,6 +73,10 @@ if [[ "$(uname)" == "Darwin" ]]; then
   fresh yabai/skhdrc --file
   fresh yabai/yabairc --file
 fi
+
+fresh config/starship.toml --file=~/.config/starship.toml
+
+fresh config/gamemode.ini --file=~/.config/gamemode.ini
 
 fresh_after_build() {
   tmux_remove_utf8_option
