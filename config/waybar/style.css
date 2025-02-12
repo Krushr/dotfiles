@@ -1,113 +1,146 @@
-@import "tokyonight.css";
+@import "../../.cache/wal/colors-waybar.css";
+
+@define-color backgroundlight @color5;
+@define-color backgrounddark @color11;
+@define-color workspacesbackground1 @color5;
+@define-color workspacesbackground2 @color11;
+@define-color bordercolor @color11;
+@define-color textcolor1 #FFFFFF;
+@define-color textcolor2 #FFFFFF;
+@define-color textcolor3 #FFFFFF;
+@define-color iconcolor #FFFFFF;
 
 * {
+  font-family: "Symbols Nerd Font", "Fira Sans Semibold", "Font Awesome 6 Free",
+    FontAwesome, Roboto, Arial, Helvetica, sans-serif;
   border: none;
   border-radius: 0;
-  font-family: Hack Nerd Font;
-  font-weight: bold;
-  font-size: 14px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  min-height: 0;
+  font-size: 16px;
 }
 
 window#waybar {
-  background: @bg;
-  color: @text;
-  opacity: 0.9;
+  background: rgba(26, 27, 38, 0.3);
+  border-bottom: 0px solid #ffffff;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
-tooltip {
-  background: @bg_dark;
-  border-radius: 10px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #11111b;
+.modules-left {
+  padding-left: 14px;
+}
+
+/* Workspaces */
+
+#workspaces {
+  background: @workspacesbackground1;
+  margin: 2px 18px 3px 1px;
+  padding: 0px 2px;
+  border-radius: 5px;
+  border: 0px;
+  font-weight: bold;
+  opacity: 0.8;
+  font-size: 16px;
 }
 
 #workspaces button {
-  padding: 1px;
-  color: @comment;
-  margin-right: 5px;
+  color: @textcolor1;
+  padding: 0px 6px;
+  margin: 3px 2px;
+  border-radius: 3px;
+  border: 0px;
+  background-color: @workspacesbackground2;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.4;
 }
 
-#workspaces button.active {
-  color: @text;
-}
-
-#workspaces button.focused {
-  background: @blue;
-}
-
-#workspaces button.urgent {
-  background: @red1;
+#workspaces button.visible {
+  min-width: 30px;
+  opacity: 1;
 }
 
 #workspaces button:hover {
-  background: @dark3;
-  color: @text;
+  opacity: 0.7;
 }
 
-#clock,
+#workspaces button.urgent {
+  background-color: @color3;
+}
+
+/* Tooltip */
+
+tooltip {
+  background-color: @backgroundlight;
+  border-radius: 16px;
+  opacity: 0.9;
+  margin: 0px;
+}
+
+tooltip label {
+  color: @textcolor2;
+}
+
+/* Window Title */
+
+#window {
+  margin: 3px 15px 3px 0px;
+  padding: 2px 10px 0px 10px;
+  border-radius: 5px;
+  color: @textcolor2;
+  opacity: 0.8;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+/* Modules */
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
 #battery,
 #pulseaudio,
 #cpu,
 #memory,
 #network,
-#workspaces,
-#tray,
-#workspaces,
 #backlight,
 #custom-pacman,
 #custom-session,
-#custom-media {
-  background: @terminal_black;
-  opacity: 1;
-  padding: 0px 10px;
-  margin: 2px 0px;
-  border-radius: 10px;
+#custom-media.chromium {
+  opacity: 0.8;
+  border-radius: 5px;
+  padding: 2px 10px 0px 10px;
+  margin: 3px 15px 3px 0px;
+  background-color: @backgroundlight;
+  color: @textcolor2;
 }
 
-#tray {
-  border-radius: 10px;
-}
-
-#workspaces {
-  border-radius: 10px;
-  padding-right: 0px;
-  padding-left: 5px;
-  margin-left: 5px;
-}
-
-#cpu {
-  color: @magenta;
+#custom-pacman.green {
+  color: @textcolor1;
 }
 
 #clock {
-  color: @yellow;
+  background-color: @backgrounddark;
+  color: @textcolor1;
+  border-radius: 3px 5px 3px 5px;
+  padding: 1px 10px 0px 10px;
+  margin: 3px 0px;
+  border: 3px solid @bordercolor;
 }
 
-#network {
-  color: @green;
+#tray {
+  padding: 0px 15px 0px 0px;
 }
 
-#network.disconnected {
-  color: @red1;
+#tray > .passive {
+  -gtk-icon-effect: dim;
 }
 
-#pulseaudio {
-  color: @purple;
-}
-
-#memory {
-  color: @blue1;
-}
-
-#custom-pacman {
-  color: @cyan;
-}
-
-#custom-session {
-  color: @red;
-  margin-right: 4px;
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
 }

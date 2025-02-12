@@ -1,7 +1,11 @@
 {
   "layer": "top", // Waybar at top layer
   "height": 0, // Waybar height (to be removed for auto height)
-  "spacing": 4, // Gaps between modules (4px)
+  "spacing": 0, // Gaps between modules (4px)
+  "margin-top": 14,
+  "margin-bottom": 0,
+  "margin-left": 14,
+  "margin-right": 14,
 
   // Choose the order of the modules
   "modules-left": ["hyprland/workspaces", "custom/media"],
@@ -11,9 +15,9 @@
     "network",
     "cpu",
     "memory",
-    "clock",
     "tray",
-    "custom/session"
+    "custom/session",
+    "clock",
   ],
 
   // Modules configuration
@@ -21,54 +25,55 @@
     "disable-scroll": true,
     "all-outputs": false,
     "on-click": "activate",
-    "format": "<span font=\"12\" rise=\"-1000\">{icon}</span>",
+    "format": "{}",
     "format-icons": {
-      "1": "",
-      "3": "󰈹",
       "urgent": "",
-      "default": ""
-    }
+      "default": "",
+    },
   },
   "hyprland/window": {
     "format": "{}",
-    "separate-outputs": true
+    "rewrite": {
+      "(.*) — Mozilla Firefox": "$1",
+    },
+    "separate-outputs": true,
   },
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
       "activated": "",
-      "deactivated": ""
-    }
+      "deactivated": "",
+    },
   },
   "tray": {
     // "icon-size": 21,
-    "spacing": 10
+    "spacing": 10,
   },
   "clock": {
     "format": "<span font='12' rise='-1000'> </span> {:%H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": " {:%A, %b %d %Y}"
+    "format-alt": " {:%A, %b %d %Y}",
   },
   "cpu": {
     "format": "<span font='12' rise='-1000'> </span> {usage}%",
-    "tooltip": false
+    "tooltip": false,
   },
   "memory": {
-    "format": "<span font='12' rise='-1000'> </span> {}%"
+    "format": "<span font='12' rise='-1000'> </span> {}%",
   },
   "temperature": {
     "critical-threshold": 80,
     "format": "{temperatureC}°C {icon}",
-    "format-icons": ["", "", ""]
+    "format-icons": ["", "", ""],
   },
   "network": {
     "format": "{ifname}",
     "format-wifi": "<span font='12' rise='-1000'></span> {essid} ({signalStrength}%)",
-    "format-ethernet": "<span font='12' rise='-1000'></span> {ifname}",
+    "format-ethernet": "  {bandwidthDownBytes}  {bandwidthUpBytes}",
     "tooltip-format": "{ifname} via {gwaddr}",
     "format-linked": "<span font='12' rise='-1000'></span> {ifname} (No IP)",
     "format-disconnected": "<span font='12' rise='-1000'>⚠</span> Disconnected",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -85,29 +90,31 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": ["", "", ""],
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
   },
   "custom/pacman": {
-    "format": "<span font='12' rise='-1000'> </span> {}",
-    "exec": "checkupdates | wc -l",
-    "interval": "900",
-    "on-click": "kitty -e yay"
+    "format": "  {}",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/pacman.sh",
+    "escape": true,
+    "interval": 900,
+    "on-click": "ghostty -e paru",
   },
   "custom/session": {
     "format": "<span font='12' rise='-1000'>{icon}</span>",
     "format-icons": {
-      "default": ""
+      "default": "",
     },
     "toolip": true,
-    "on-click": "wlogout"
+    "on-click": "wlogout",
   },
   "custom/media": {
     "format": "<span font='12' rise='-1000'>{icon} </span> {}",
     "format-icons": {
       "default": "",
-      "chromium": "󰎆"
+      "chromium": "󰎆",
     },
     "escape": true,
     "return-type": "json",
@@ -116,6 +123,6 @@
     "on-click-right": "playerctl stop",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous",
-    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
-  }
+    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
+  },
 }
