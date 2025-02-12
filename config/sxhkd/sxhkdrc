@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	wezterm
+	ghostty
 
 # program launcher
 super + @space
@@ -17,10 +17,6 @@ super + Escape
 # screenshot a selected area and save it to the clipboard
 alt + shift + 4
 	maim -s | xclip -selection clipboard -t image/png
-
-# open rofi to search zeal docs
-super + shift + z
- rofi-zeal
 
 #
 # bspwm hotkeys

@@ -2,8 +2,11 @@
 
 sxhkd &
 
-bspc monitor DP-2 -d I II III IV V
-bspc monitor HDMI-0 -d VI VII VIII IX X
+xrandr --output DP-2 --off
+xrandr --output HDMI-0 --scale 0.9x0.9
+
+bspc monitor DP-2 -r
+bspc monitor HDMI-0 -d I II III IV V VI VII VIII IX X
 
 bspc config border_width 2
 bspc config window_gap 38
@@ -34,4 +37,5 @@ picom -bc &
 # Launch Dunst for notifications
 dunst &
 
-~/.fehbg &
+# Cycle through wallpapers randomly
+~/.config/bspwm/random-wall.sh ~/wallpapers &
