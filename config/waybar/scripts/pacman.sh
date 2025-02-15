@@ -1,9 +1,9 @@
 #!/bin/bash
 
 pacman_updates="$(CHECKUPDATES_DB="/tmp/checkup-db-${UID}-$$" checkupdates)"
-pacman_update_count="$(echo "$pacman_updates" | wc -l)"
+pacman_update_count="$(echo -n "$pacman_updates" | wc -l)"
 aur_updates="$(paru -Qua)"
-aur_update_count="$(echo "${aur_updates}" | wc -l)"
+aur_update_count="$(echo -n "${aur_updates}" | wc -l)"
 total_update_count=$(($pacman_update_count + $aur_update_count))
 
 if [ "$total_update_count" -gt 0 ]; then
