@@ -16,7 +16,6 @@
     "cpu",
     "memory",
     "tray",
-    "custom/session",
     "clock",
   ],
 
@@ -101,14 +100,6 @@
     "escape": true,
     "interval": 900,
     "on-click": "ghostty -e paru",
-  },
-  "custom/session": {
-    "format": "<span font='12' rise='-1000'>{icon}</span>",
-    "format-icons": {
-      "default": "",
-    },
-    "toolip": true,
-    "on-click": "wlogout",
   },
   "custom/media": {
     "format": "<span font='12' rise='-1000'>{icon} </span> {}",
