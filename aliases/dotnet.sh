@@ -1,3 +1,5 @@
+alias dn="dotnet $@"
+
 dnn() {
   if [[ $# -eq 2 ]]; then
     dotnet new "$1" -o "$2"
