@@ -78,7 +78,19 @@ fi
 
 fresh config/starship.toml --file=~/.config/starship.toml
 
+if command -v podman &> /dev/null; then
+  fresh jasoncodes/dotfiles bin/podman-machine-run --bin
+  fresh jasoncodes/dotfiles LaunchAgents/podman-machine.plist --file=~/Library/LaunchAgents/podman-machine.plist
+fi
+
+start_podman()
+{
+  if [ -f ~/Library/LaunchAgents/podman-machine.plist ] && ! launchctl list podman-machine &> /dev/null; then
+     launchctl load ~/Library/LaunchAgents/podman-machine.plist
+   fi
+}
 
 fresh_after_build() {
   tmux_remove_utf8_option
+  start_podman
 }
