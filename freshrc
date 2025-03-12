@@ -19,35 +19,12 @@ fresh jasoncodes/dotfiles shell/aliases/rails.sh
 fresh jasoncodes/dotfiles shell/aliases/ruby.sh
 fresh jasoncodes/dotfiles shell/aliases/git.sh
 fresh jasoncodes/dotfiles config/pryrc --file
-fresh twe4ked/dotfiles config/ackrc --file
-fresh twe4ked/dotfiles bin/heroku-remote-add --bin
-fresh twe4ked/dotfiles bin/build_status --bin
-fresh jasoncodes/dotfiles bin/adduser --bin
-fresh jasoncodes/dotfiles bin/wemux/\* --bin
-fresh jamesottaway/tmux-up tmux-up --bin
 fresh jasoncodes/dotfiles bin/toggl --bin
-fresh jasoncodes/ctrlp-modified.vim lib/branch.sh --bin
-fresh jasoncodes/ctrlp-modified.vim lib/branch_modified.sh --bin
-fresh jasoncodes/ctrlp-modified.vim lib/modified.sh --bin
 fresh rupa/z z.sh
 
 fresh-options --file=~/.gitconfig --marker=\#
   fresh jasoncodes/dotfiles config/gitconfig
 fresh-options
-
-fresh-options --file=~/.tmux.conf --marker=\#
-  fresh jasoncodes/dotfiles config/tmux.conf
-  fresh nathanaelkane/dotfiles config/tmux/ctrlg.conf
-fresh-options
-fresh config/\* --file
-
-tmux_remove_utf8_option() {
-  if [[ $OSTYPE == "darwin"* ]]; then
-    gsed -i '/set-option -g status-utf8 on/d' ~/.fresh/build/tmux.conf
-  else
-    sed -i '/set-option -g status-utf8 on/d' ~/.fresh/build/tmux.conf
-  fi
-}
 
 fresh config/waybar --file=~/.config/waybar/
 fresh wezterm/wezterm.lua --file
@@ -91,6 +68,5 @@ start_podman()
 }
 
 fresh_after_build() {
-  tmux_remove_utf8_option
   start_podman
 }
