@@ -49,8 +49,7 @@ fresh-options --file=~/.config/kitty/kitty.conf --marker=\#
 fresh-options
 
 if [[ "$(uname)" == "Darwin" ]]; then
-  fresh yabai/skhdrc --file
-  fresh yabai/yabairc --file
+  fresh config/aerospace.toml --file
 fi
 
 fresh config/starship.toml --file=~/.config/starship.toml
