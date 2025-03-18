@@ -26,7 +26,6 @@ fresh-options --file=~/.gitconfig --marker=\#
   fresh jasoncodes/dotfiles config/gitconfig
 fresh-options
 
-fresh config/waybar --file=~/.config/waybar/
 fresh wezterm/wezterm.lua --file
 
 if [[ "$(uname)" == "Linux" ]]; then
@@ -38,6 +37,7 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh-options
 
   fresh config/hypr --file=~/.config/hypr/
+  fresh config/waybar --file=~/.config/waybar/
 
   fresh config/bspwm/bspwmrc --bin=~/.config/bspwm/bspwmrc
   fresh config/sxhkd/\* --file=~/.config/sxhkd/sxhkdrc --marker=\#
