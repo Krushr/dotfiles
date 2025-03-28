@@ -2,11 +2,11 @@
 
 sxhkd &
 
-xrandr --output DP-2 --off
-xrandr --output HDMI-0 --scale 0.9x0.9
+xrandr --output DisplayPort-1 --off
+xrandr --output HDMI-A-1 --scale 0.9x0.9
 
-bspc monitor DP-2 -r
-bspc monitor HDMI-0 -d I II III IV V VI VII VIII IX X
+bspc monitor DisplayPort-1 -r
+bspc monitor HDMI-A-1 -d I II III IV V VI VII VIII IX X
 
 bspc config border_width 2
 bspc config window_gap 38
