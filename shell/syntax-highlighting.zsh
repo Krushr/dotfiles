@@ -1,4 +1,4 @@
-ZSH_PLUGINS_PATH=/usr/share/zsh/plugins
+ZSH_PLUGINS_PATH=~/.zsh
 
 if type brew &>/dev/null; then
   ZSH_PLUGINS_PATH=$(brew --prefix)/share
