@@ -10,6 +10,7 @@ if [[ $# -lt 1 ]] || [[ ! -d $1 ]]; then
 fi
 
 CACHE_DIR=~/.cache/random-wall
+CURRENT_WALL=$(hyprctl hyprpaper listloaded)
 
 # This controls (in seconds) when to switch to the next image
 INTERVAL=1800
@@ -17,11 +18,8 @@ INTERVAL=1800
 wal -R
 
 while true; do
-  WALL=$(find $1 -type f | shuf -n 1)
-  hyprctl hyprpaper preload $WALL
-  hyprctl hyprpaper wallpaper DP-2,$WALL
-  hyprctl hyprpaper wallpaper HDMI-A-1,$WALL
-  hyprctl hyprpaper unload unused
+  WALL=$(find $1 -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
+  hyprctl hyprpaper reload ,$WALL
   wal -nq -i $WALL
   ln -s -f $WALL $CACHE_DIR/current
   gm convert $WALL -blur 50x30 $CACHE_DIR/blurred
