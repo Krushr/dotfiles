@@ -13,3 +13,17 @@ alias dnr="dotnet run"
 dnrp() {
   dotnet run --project "$@"
 }
+
+alias dnt="dotnet test"
+
+dntp() {
+  dotnet test --project "$@"
+}
+
+alias dnb="dotnet build"
+
+dnbp() {
+  dotnet test --project "$@"
+}
+
+alias dnw="dotnet watch"
