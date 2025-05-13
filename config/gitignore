@@ -3,3 +3,4 @@
 *.rbc
 /.envrc
 tags
+.idea
