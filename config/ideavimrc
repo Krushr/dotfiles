@@ -1,0 +1,87 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+let mapleader = " "
+
+set hlsearch
+set ignorecase
+set smartcase
+set incsearch
+set notimeout
+set timeoutlen=5000
+set scrolloff=5
+set relativenumber
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+set NERDTree
+set highlightedyank
+set commentary
+set which-key
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+let g:WhichKeyDesc_search_everywhere = "<leader><leader> search everywhere"
+nmap <leader><leader> <Action>(SearchEverywhere)
+
+"" code
+let g:WhichKeyDesc_code = "<leader>c code"
+nmap <leader>cf <Action>(ReformatCode)
+let g:WhichKeyDesc_code_format = "<leader>cf format buffer"
+
+nmap <leader>ca <Action>(ShowIntentionActions)
+let g:WhichKeyDesc_code_actions = "<leader>ca show actions"
+
+nmap <leader>cd <Action>(ShowErrorDescription)
+let g:WhichKeyDesc_code_error_description = "<leader>cd show error description"
+
+nmap <leader>cr <Action>(RenameElement)
+let g:WhichKeyDesc_code_rename = "<leader>cr rename"
+
+"" debug
+let g:WhichKeyDesc_debug = "<leader>d debug"
+nmap <leader>db <Action>(ToggleLineBreakpoint)
+
+" explorer
+nmap <leader>e :NERDTreeToggle<CR>
+let g:WhichKeyDesc_toggle_explorer = "<leader>e toggle explorer"
+
+" test
+let g:WhichKeyDesc_test = "<leader>t test"
+
+nmap <leader>tt <Action>(RiderUnitTestRunContextAction)
+let g:WhichKeyDesc_test_nearest = "<leader>tt run nearest test"
+
+nmap <leader>td <Action>(RiderUnitTestDebugContextAction)
+let g:WhichKeyDesc_test_debug_nearest = "<leader>td debug nearest test"
+
+" file
+let g:WhichKeyDesc_file = "<leader>d file"
+
+let g:WhichKeyDesc_file_terminal = "<leader>ft open terminal"
+nmap <leader>ft <Action>(ActivateTerminalToolWindow)
+
+" git
+let g:WhichKeyDesc_git = "<leader>g git"
+
+nmap <leader>gg <Action>(ActivateCommitToolWindow)
+let g:WhichKeyDesc_git_lazygit = "<leader>gg lazygit (root dir)"
+
+nmap <leader>gG <Action>(ActivateCommitToolWindow)
+let g:WhichKeyDesc_git_lazygit_cwd = "<leader>gG lazygit (cwd)"
+
+nmap <leader>gb <Action>(Annotate)
+let g:WhichKeyDesc_git_blame = "<leader>gb git blame"
+
+nmap <leader>gf <Action>(Vcs.ShowTabbedFileHistory)
+let g:WhichKeyDesc_git_current_file = "<leader>gf current file history"
+
+nmap <leader>gl <Action>(Vcs.Show.Log)
+let g:WhichKeyDesc_git_log = "<leader>gl git log"
+
+
+"" ui
+let g:WhichKeyDesc_ui = "<leader>u ui"
+nmap <leader>ur <Action>(IdeaVim.ReloadVimRc.reload)
+let g:WhichKeyDesc_ui_reload_ideavim_config = "<leader>ur reload ideavim config"
+
