@@ -13,6 +13,9 @@ set timeoutlen=5000
 set scrolloff=5
 set relativenumber
 
+" enable copy/paste to/from system pasteboard
+set clipboard+=unnamedplus
+
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 
 set NERDTree
@@ -21,9 +24,10 @@ set commentary
 set which-key
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
-let g:WhichKeyDesc_search_everywhere = "<leader><leader> search everywhere"
-nmap <leader><leader> <Action>(SearchEverywhere)
+let g:WhichKeyDesc_search_files = "<leader><leader> search files"
+nmap <leader><leader> <Action>(GotoFile)
 
+let g:WhichKeyDesc_copy_path_with_line_number = "<leader>cl Copy path with line number"
 "" code
 let g:WhichKeyDesc_code = "<leader>c code"
 nmap <leader>cf <Action>(ReformatCode)
@@ -37,6 +41,12 @@ let g:WhichKeyDesc_code_error_description = "<leader>cd show error description"
 
 nmap <leader>cr <Action>(RenameElement)
 let g:WhichKeyDesc_code_rename = "<leader>cr rename"
+
+nmap <Leader>cf <Action>(CopyContentRootPath)
+let g:WhichKeyDesc_copy_path = "<leader>cf copy path"
+
+nmap <Leader>cl <Action>(CopyPathWithLineNumber)
+let g:WhichKeyDesc_copy_path_with_line_number = "<leader>cl copy path with line number"
 
 "" debug
 let g:WhichKeyDesc_debug = "<leader>d debug"
@@ -56,7 +66,7 @@ nmap <leader>td <Action>(RiderUnitTestDebugContextAction)
 let g:WhichKeyDesc_test_debug_nearest = "<leader>td debug nearest test"
 
 " file
-let g:WhichKeyDesc_file = "<leader>d file"
+let g:WhichKeyDesc_file = "<leader>f file"
 
 let g:WhichKeyDesc_file_terminal = "<leader>ft open terminal"
 nmap <leader>ft <Action>(ActivateTerminalToolWindow)
@@ -79,9 +89,19 @@ let g:WhichKeyDesc_git_current_file = "<leader>gf current file history"
 nmap <leader>gl <Action>(Vcs.Show.Log)
 let g:WhichKeyDesc_git_log = "<leader>gl git log"
 
-
 "" ui
 let g:WhichKeyDesc_ui = "<leader>u ui"
+
 nmap <leader>ur <Action>(IdeaVim.ReloadVimRc.reload)
 let g:WhichKeyDesc_ui_reload_ideavim_config = "<leader>ur reload ideavim config"
 
+"" search
+let g:WhichKeyDesc_search = "<leader>s search"
+let g:WhichKeyDesc_search_everywhere = "<leader>se search everwhere"
+nmap <leader>se <Action>(SearchEverywhere)
+
+" window navigation
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
