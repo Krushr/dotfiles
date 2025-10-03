@@ -1,5 +1,5 @@
 {
-  "layer": "top", // Waybar at top layer
+  "layer": "bottom", // Waybar at bottom layer
   "height": 0, // Waybar height (to be removed for auto height)
   "spacing": 0, // Gaps between modules (4px)
   "margin-top": 14,
