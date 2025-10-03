@@ -13,7 +13,7 @@ CACHE_DIR=~/.cache/random-wall
 CURRENT_WALL=$(hyprctl hyprpaper listloaded)
 
 # This controls (in seconds) when to switch to the next image
-INTERVAL=1800
+INTERVAL=3600
 
 wal -R
 
