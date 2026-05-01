@@ -1,3 +1,4 @@
+source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_DEFAULT_OPTS='--layout=reverse-list
 --color=fg:#c5cdd9,bg:#262729,hl:#6cb6eb
