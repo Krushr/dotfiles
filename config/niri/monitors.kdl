@@ -1,0 +1,21 @@
+// Find more information on the wiki:
+// https://niri-wm.github.io/niri/Configuration:-Outputs
+output "DP-1" {
+    mode "3840x2160@143.963"
+
+    scale 1.25
+
+    transform "normal"
+
+    position x=3072 y=0
+}
+
+output "DP-2" {
+    mode "3840x2160@59.997"
+
+    scale 1.25
+
+    transform "normal"
+
+    position x=0 y=0
+}

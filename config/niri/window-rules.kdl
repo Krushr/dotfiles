@@ -1,0 +1,69 @@
+// Window rules let you adjust behavior for individual windows.
+// Find more information on the wiki:
+// https://niri-wm.github.io/niri/Configuration:-Window-Rules
+
+// enable rounded corners for all windows.
+window-rule {
+    geometry-corner-radius 4
+    clip-to-geometry true
+    draw-border-with-background false
+}
+
+
+// Work around WezTerm's initial configure bug
+// by setting an empty default-column-width.
+window-rule {
+    // This regular expression is intentionally made as specific as possible,
+    // since this is the default config, and we want no false positives.
+    // You can get away with just app-id="wezterm" if you want.
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Open the Librewolf picture-in-picture player as floating by default.
+window-rule {
+    match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// windowrule = match:class steam, float on
+
+// --- Terminals ---
+window-rule {
+  match app-id=r#"(ghostty|kitty)$"#
+  opacity 0.7
+  background-effect {
+    blur true
+  }
+}
+
+window-rule {
+  match app-id=r#"(ghostty|kitty)$"# is-focused=true
+  opacity 0.85
+}
+
+// --- Discord ---
+window-rule {
+  match app-id=r#"discord$"#
+  opacity 0.9
+  background-effect {
+    blur true
+  }
+}
+
+window-rule {
+  match app-id=r#"discord$"# is-focused=true
+  opacity 0.95
+}
+
+// --- Warframe ---
+window-rule {
+  match title="Warframe"
+  open-fullscreen true
+}
+
+// --- Steam ---
+window-rule {
+  match app-id=r#"steam$"#
+  open-floating true
+}
