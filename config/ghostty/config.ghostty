@@ -3,3 +3,5 @@ macos-option-as-alt = true
 
 # Pass zellij keybindings through to the terminal
 keybind = ctrl+shift+s=unbind
+
+window-decoration = none
