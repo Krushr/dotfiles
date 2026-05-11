@@ -98,7 +98,7 @@
     "return-type": "json",
     "exec": "~/.config/waybar/scripts/pacman.sh",
     "escape": true,
-    "interval": 900,
+    "interval": 3600,
     "on-click": "ghostty -e paru",
   },
   "custom/media": {

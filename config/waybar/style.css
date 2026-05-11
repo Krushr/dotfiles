@@ -11,7 +11,8 @@
 @define-color iconcolor #FFFFFF;
 
 * {
-  font-family: "Symbols Nerd Font", "Fira Sans Semibold", "Font Awesome 6 Free",
+  font-family:
+    "Symbols Nerd Font", "Fira Sans Semibold", "Font Awesome 6 Free",
     FontAwesome, Roboto, Arial, Helvetica, sans-serif;
   border: none;
   border-radius: 0;
@@ -19,7 +20,7 @@
 }
 
 window#waybar {
-  background: rgba(26, 27, 38, 0.3);
+  background: none;
   border-bottom: 0px solid #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -86,6 +87,7 @@ tooltip label {
   padding: 2px 10px 0px 10px;
   border-radius: 5px;
   color: @textcolor2;
+  background-color: @backgrounddark;
   opacity: 0.8;
 }
 
