@@ -6,6 +6,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open Terminal: ghostty" { spawn "ghostty"; }
     Mod+Space hotkey-overlay-title="Open Noctalia Launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Super+Alt+L hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockscreen lock"; }
+    Mod+Shift+Q hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
 
     // --- Media Controls ---

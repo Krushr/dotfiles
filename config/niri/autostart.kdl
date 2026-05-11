@@ -1,2 +1,2 @@
-// This line starts noctalia-shell
-spawn-sh-at-startup "qs -c nocatlia-shell"
+// Start noctalia-shell
+spawn-sh-at-startup "qs -c noctalia-shell"
