@@ -20,7 +20,6 @@ fresh jasoncodes/dotfiles shell/aliases/ruby.sh
 fresh jasoncodes/dotfiles shell/aliases/git.sh
 fresh jasoncodes/dotfiles config/pryrc --file
 fresh jasoncodes/dotfiles bin/toggl --bin
-fresh rupa/z z.sh
 
 fresh-options --file=~/.gitconfig --marker=\#
   fresh jasoncodes/dotfiles config/gitconfig
