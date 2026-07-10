@@ -1,13 +1,14 @@
 local mainMod = "SUPER"
 
 local function noctalia_ipc_call(args)
-	return hl.dsp.exec_cmd("qs -c noctalia-shell ipc call " .. args)
+	return hl.dsp.exec_cmd("noctalia msg " .. args)
 end
 
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd("ghostty"))
-hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd("rofi -show drun"))
-hl.bind(mainMod .. " + ALT + Q", noctalia_ipc_call("sessionMenu toggle"))
-hl.bind(mainMod .. " + ALT + L", noctalia_ipc_call("lockscreen lock"))
+hl.bind(mainMod .. " + Space", noctalia_ipc_call("panel-toggle launcher"))
+hl.bind(mainMod .. " + ALT + Q", noctalia_ipc_call("panel-toggle session"))
+hl.bind(mainMod .. " + ALT + L", noctalia_ipc_call("session lock"))
+hl.bind(mainMod .. " + ALT + C", noctalia_ipc_call("caffeine-toggle"))
 
 -- === Window ===
 hl.bind(mainMod .. " + W", hl.dsp.window.kill())
