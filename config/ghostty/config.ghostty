@@ -4,4 +4,9 @@ macos-option-as-alt = true
 # Pass zellij keybindings through to the terminal
 keybind = ctrl+shift+s=unbind
 
+# Use same bindings for copy/paste across Linux and macOS
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+
 window-decoration = none
+theme = TokyoNight
