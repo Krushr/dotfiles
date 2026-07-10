@@ -1,9 +1,17 @@
 hl.window_rule({
 	name = "terminal opacity",
 	match = {
-		class = "ghostty",
+		class = "com.mitchellh.ghostty",
 	},
-	opacity = "0.85 0.7",
+	opacity = "0.85 0.85",
+})
+
+hl.window_rule({
+	name = "emacs opacity",
+	match = {
+		class = "emacs.*",
+	},
+	opacity = "0.85 0.85",
 })
 
 hl.window_rule({
