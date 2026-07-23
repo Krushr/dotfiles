@@ -1,1 +1,1 @@
-export PATH=~/.local/bin:$PATH
+export PATH=~/.local/bin:~/.config/emacs/bin:$PATH
